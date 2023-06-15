@@ -10,9 +10,10 @@
 // console.log(num2);
 
 
+var a=9;
+        console.log(a);
+        a=6;
+        console.log(a);
 
-
-var value;
- value="3.14";
-console.log(value);
+        
 

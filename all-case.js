@@ -14,7 +14,7 @@ var num1=9;
 {
     console.log(num1);
 }
-// it can run //
+// it can run no error//
 
 num1=8;
 console.log(num2);
@@ -157,3 +157,28 @@ nam=nam1;
 console.log(nam);
 
 // nam=15 bcz nam=nam1//
+
+{
+    let num=3;
+}
+console.log(num);
+
+// it make error bcz let is a block scope.
+
+{
+    var num=3;
+}
+console.log(num);
+
+//here op-3 bcz var is a globle scope .
+
+var x=8;
+
+if(1==1){
+    console.log(x);
+    var nu=8;
+    console.log(nu);
+
+}
+  
+     console.log(nu);
