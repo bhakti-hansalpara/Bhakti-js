@@ -194,6 +194,23 @@
 // let{address:{city}}=person;
 
 
+let student_name={
+    dealits:{
+       feild:{
+        ['computer', 'machinacle','civil'],
+        year:2023,
+        semater:'1st year 2nd sem'
+       },
+    address:{
+        steert:4,
+        city:['surat','rajkot','gondal']
+    }
+      
+    }
+
+}
+.console.log(student_name.feild[2]);
+
 
 
 
