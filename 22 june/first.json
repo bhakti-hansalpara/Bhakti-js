@@ -1,0 +1,14 @@
+{
+    "name":"bhakti",
+    "std":"2",
+    "kids": 3,
+    "new":"null",
+    "hobbies":["music","dance","drawing"],
+    "vehical":{
+        "car":"swift",
+        "bike":"activa"
+    }
+  
+
+}
+

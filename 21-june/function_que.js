@@ -31,17 +31,18 @@
 
 //without argument without return type
 
-function calculateSum(num1,num2){
-var a=num1+num2;
-console.log(a);
-}
-calculateSum(2,3);
+// function calculateSum(num1,num2){
+// var a=num1+num2;
+// console.log(a);
+// }
+// calculateSum(2,3);
 
 3
 // function printArray(arr){
 //       return arr;
 // }
 // var arr=["bhakti","disha","dhwni","shlok"];
+// console.log(arr[2]);
 // console.log(arr);
 
 // systex= function printArray(arr){
@@ -273,47 +274,168 @@ function calculateMultiply(num1, num2) {
   console.log(calculateMultiply('5', []));    // Output: NaN (invalid argument)
 
   13
-  function calculateMultiply(num1, num2) {
-    if (typeof num1 !== 'number') {
-      num1 = 1;
+ 
+
+// try 13th 
+function calculateMultiply(num1, num2) {
+    if(num1!=undefined && num2!=undefined){
+        return num1*num2;
     }
-  
-    if (typeof num2 !== 'number') {
+    else{
+        return 1;
+    }
+}
+ 
+let  ans1=calculateMultiply('8',8);
+console.log(ans1);
+let  ans2=calculateMultiply();
+console.log(ans2);
+
+// 13-over
+function calculateMultiply(num1, num2) {
+    if (num1 === undefined && num2 === undefined) {
+      return 1;
+    } else if (num1 === undefined) {
+      num1 = 1;
+    } else if (num2 === undefined) {
       num2 = 1;
     }
   
     return num1 * num2;
   }
+  calculateMultiply(2,1);
+  console.log(calculateMultiply(2,3));
+  console.log(calculateMultiply());
   
-  console.log(calculateMultiply(5, 2));      
-console.log(calculateMultiply(3, "4"));      
-console.log(calculateMultiply(2, 'hello')); 
-console.log(calculateMultiply('5', []));  
-console.log(calculateMultiply()); 
 
-// try 13th 
-function calculateMultiply(num1, num2) {
-    if(num1===undefined && num2===undefined){
-        return 1;
-    }
-    else{
+//with argument and return type
+function calculateMultiply(num1,num2){
+    if(num1 !=undefined && num2 !==undefined){
         return num1*num2;
     }
+    else{
+        return 1;
+    }
 }
-console.log(calculateMultiply(2, 'hello')); 
-console.log(calculateMultiply('5', []));  
+console.log(calculateMultiply(10,20));
+
+//without argument with return type
+function calculateMultiply(){
+    const num1=10;
+    const num2=20;
+    if(num1!==undefined && num2!==undefined){
+        return num1*num2;
+    }
+    else{
+        return 1;
+    }
+}
+console.log(calculateMultiply());
+
+//with argument without return type
+function calculateMultiply(num1,num2){
+    if(num1 !=undefined && num2 !==undefined){
+        const multiply=num1*num2;
+        console.log(multiply);
+    }
+    else{
+        return 1;
+    }
+}
+(calculateMultiply(10,20));
+
+//without argument without return type
+function calculateMultiply(){
+    const num1=10;
+    const num2=100;
+    if(num1 !==undefined&& num2!==undefined){
+         const multiply=num1*num2;     
+         console.log(multiply);
+    }
+    else{
+        return 1;
+    }
+}
+calculateMultiply();
+ 
+//arrow function
+
+//with argument and return type
+const calculateMultiply=(num1,num2)=>{
+    if(num1!==undefined && num2!==undefined){
+        return num1*num2;
+    }
+    else{
+        return 1;
+    }
+}
+console.log(calculateMultiply());
+
+//without argument with return type
+const calculateMultiply=()=>{
+    const num1=10;
+    const num2=20;
+      if(num1!==undefined && num2!==undefined){
+        return num1*num2;
+      }
+      else{
+        return 1;
+      }
+}
+console.log(calculateMultiply());
+
+
+      //with argument without return type
+      const calculateMultiply = (num1, num2) => {
+       if (num1 !== undefined && num2 !== undefined) {
+           const multiply = num1 * num2;
+           console.log(multiply);
+       }
+       else {
+            return 1;
+         }
+      }
+     calculateMultiply(10, 20);
+ 
+     //without argument without return type
+      const calculateMultiply=()=>{
+      const num1=10;
+      const num2=20;
+      if(num1!==undefined&&num2!==undefined){
+           const multiply=num1*num2;
+          console.log(multiply);
+      }
+       else{
+        return 1;
+     }
+   }
+   calculateMultiply();
+
+
 14
+function greet(name){
+    if(name==undefined){
+       console.log("anonymous");
+    }
+    else{
+       console.log("beautiful")
+    }
+}
+greet();
+greet(9);
+
+function greet(name){
+    if(name!=undefined){
+        console.log("helo");
+    }else{
+        console.log("aynomous");
+    }
+}
+greet();
+greet(9);
            
 
-  function greet(name) {
-    if (name === undefined) {
-      name = 'Anonymous';
-      console.log(name);
-    }
-  
-    console.log('Hello');
-  }
-  greet(); 
+
  
   15
   var a=2;
@@ -345,18 +467,39 @@ function  exponent(a){
 console.log(exponent(2,3));
 console.log();   
 
-    
-  
+15
+function exponent(num){
+    if(num!==undefined) {
+        return num**num;
+    }
+    else{
+      return "power 2";
+    }
+}
+console.log(exponent());
+console.log(exponent(2));
+
+function exponent(num){
+    if(num==undefined){
+        return "power 2"
+    }
+    else{
+        return num**num;
+    }
+}
+console.log(exponent());
+console.log(exponent(2));
+
+
   
   
 
   
 
 
-    
+
  
-  
-
+ 
   
  
     
