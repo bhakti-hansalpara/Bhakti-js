@@ -61,4 +61,3 @@ let name={
 console.log(name[name1]);
 
 
-

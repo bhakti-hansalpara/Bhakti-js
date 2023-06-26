@@ -133,7 +133,7 @@ console.log("reuslut: "+name.endsWith("ti"));
 //includes ----it check that this element or this char or that number is in this string or not
 //it gives also only boolean value ture and false
 var a="bhakti!";
-var b=a.includes("bh");
+var b=a.includes(5);
 console.log(b);
 
 var a="hello gyus! I am Bhakti."
@@ -404,11 +404,11 @@ console.log(str.concat(" Goodbye!"));
 
 44
  const sentence = "JavaScript is flexible!";
-console.log(sentence.charAt(sentence.length - 1));
+console.log(sentence.charAt(sentence.length - 1));//lat element
 
 45
 const sentence = "JavaScript is interesting!";
-console.log(sentence.substring(10));
+console.log(sentence.substring(10));// is interesting!
 
 46
  const str = "Hello, World!";
@@ -416,7 +416,7 @@ console.log(str.search("World"));
 
 47
  const sentence = "JavaScript is versatile!";
-console.log(sentence.split(" ").reverse().join(" "));
+console.log(sentence.split(" ").reverse().join(" "));//versatile! is JavaScript
 
 48
  const sentence = "JavaScript is powerful!";
@@ -443,11 +443,11 @@ console.log(str.endsWith("!"));
 
 54
  const sentence = "JavaScript is amazing!";
-console.log(sentence.lastIndexOf("a", 12));
+console.log(sentence.lastIndexOf("a",12));//3  -- if 12 romeve than op=16--it shaw 12 beforw where is a
 
 55
  const text = "Hello, World!";
-console.log(text.substring(7, 2));
+console.log(text.substring(7, 2));//llo
 
 56
  const sentence = "JavaScript is cool!";
@@ -485,7 +485,10 @@ function is_Blank(input){
  console.log(is_Blank(""));        // true
  console.log(is_Blank(“ “)):       // false
 
-
+//try
+let abc="hello world";
+abc.replace("world"," ");
+console.log(abc());
  62
  function string_to_array(input){
     return input.split(‘ ‘);
@@ -499,7 +502,7 @@ console.log(string_to_array(“Robin Singh Chaddha”));
 function truncate_string(input,num){
     return input.slice(0,num);
 }
-console.log(truncate_string("Robin Singh",4)); // "Robi"
+console.log(truncate_string("Robin Singh",4)); // "Robi"//starting from 0 and stop when 4
 
 
 64
@@ -532,24 +535,7 @@ console.log(capitalize_words('js string exercises'));   // Js String Exercises
 
 
 68
-function insert(input,insertInput,position){
-    if(insertInput==undefined && position==undefined){
-                          return input;
-               }
-              else if(position==undefined){
-                          return insertInput.concat(input);
-               }
-               else return input.slice(0,position-1) +     
-               input.charAt(position-1).concat(insertInput)+input.slice(position);
-     }
-console.log(insert('We are doing some exercises.'));
-// We are doing some exercises.
-console.log(insert('We are doing some exercises.','JavaScript '));
-// JavaScript We are doing some exercises.
-console.log(insert('We are doing some exercises.','JavaScript ',18));
-// We are doing some JavaScript exercises.
-console.log(insert('We are doing some exercises.','JavaScript ',13));
-// We are doing JavaScript some exercises.
+
 
 
 
