@@ -467,7 +467,7 @@ console.log(sentence.replace("amazing", "awesome").toUpperCase());
 
 60
 function is_string(input){
-    if(typeof input===’string’)
+    if(typeof input==='string')
             return true;
    else return false;
 }
@@ -535,6 +535,9 @@ console.log(capitalize_words('js string exercises'));   // Js String Exercises
 
 
 68
+
+
+
 
 
 
