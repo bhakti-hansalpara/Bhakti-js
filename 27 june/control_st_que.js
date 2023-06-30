@@ -60,28 +60,75 @@
 //   console.log(dayName);
   
 // 3
-// let n = 5; 
-// let string = "";
+let n = 5; 
+let string = "";
 
-// for(let i = 0; i < n; i++) { 
-//   for(let j = 0; j < n; j++) { 
-//     string += "*"+" ";
-//   }
-//   string += "\n";
-// }
-// console.log(string);
+for(let i = 0; i < n; i++) { 
+  for(let j = 0; j < n; j++) { 
+    string += "*"+" ";
+  }
+  string += "\n";
+}
+console.log(string);
+
+for(let i=1; i<=5; i++){
+    console.log("*");
+}
 
 4
 
-// let n = 5;
-// let string = "";
-// for (let i = 0; i < n; i++) {
-//   for (let j = 0; j< n - i; j++) {
-//     string += "*"+" ";
-//   }
-//   string += "\n";
-// }
-// console.log(string);
+let n = 5;
+let string = "";
+for (let i = 0; i < n; i++) {
+  for (let j = 0; j< n - i; j++) {
+    string += "*"+" ";
+  }
+  string += "\n";
+}
+console.log(string);
+function printStarPattern(rows) {
+    for (let i = 1; i <= rows; i++) {
+      let pattern = "";
+      for (let j = 1; j <= i; j++) {
+        pattern += "* ";
+      }
+      console.log(pattern);
+    }
+  }
+  
+  // Example usage:
+  printStarPattern(5);
+
+  function printStarPattern(rows) {
+    for (let i = rows; i >= 1; i--) {
+      let pattern = "";
+      for (let j = 1; j <= i; j++) {
+        pattern += "* ";
+      }
+      console.log(pattern);
+    }
+  }
+  
+  // Example usage:
+  printStarPattern(5);
+
+  for(let i=5; i>=1; i--){
+    console.log(" ");
+    for(let j=1; j<=i; j++){
+        console.log(" *");
+    }
+    console.log("*");
+  }
+  
+  
+
+for(let i=1; i<=5; i++){
+    for(let j=1; j<=i; j++)
+    {
+        console.log("*");
+    }
+    console.log("\n");
+}
 
 5
 // function getNumberOfDays(monthNumber) {
@@ -282,6 +329,12 @@ function printObject(obj) {
   printObject(person);
 
  
-
+14
+obj={
+    1:"b",
+    2:"c"
+}
+console.log(obj);
+console.log(Object.keys(obj));
 
   

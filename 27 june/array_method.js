@@ -269,11 +269,14 @@ const result = inventory.find(({ name }) => name === "cherries");
 console.log(result); // { name: 'cherries', quantity: 5 }
 
 //------findIndex------//
-
-const array1 = [5, 12, 8, 130, 44];
+const array1 = [5, 120, 8, 10, 44];
+console.log(array1.findIndex(120));//in normle not run.
+const array1 = [5, 120, 8, 10, 44];
 const isLargeNumber = (element) => element > 13;
 console.log(array1.findIndex(isLargeNumber));
 console.log(array1.findIndex(12));
+console.log([1, , 3].findIndex((x) => x === undefined)); // 1  !==than give 0
+
 
 // --------unshift-----//
 const x=["bhakti",["misri"],"kristi"];
@@ -293,7 +296,7 @@ name.forEach(function(name,i){
   console.log(name+" "+i);
 })
 
-//---slice--//
+//---splice--//
 const months = ['Jan', 'March', 'April', 'June'];
 months.splice(1, 0, 'Feb');//it define that 1 elemnt no 0 par feb print karavo 6e
 console.log(months);
@@ -374,7 +377,9 @@ const array2 = [1, , 3, ["a", , ["d", , "e"]]];
 console.log(array2.flat()); // [ 1, 3, "a", ["d", empty, "e"] ]
 console.log(array2.flat(2)); // [ 1, 3, "a", "d", "e"]
 
+const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
 
+console.log(arr4.flat(3));//here 3 sudhi j [] remove karse
 // --------slice-----------
 const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 
@@ -385,5 +390,26 @@ console.log(animals.slice(-2));
 console.log(animals.slice(2, -1));
 console.log(animals.slice());
 
+// --------join-------//
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.log(matrix.join()); 
+console.log(matrix.join(";")); 
+console.log([1, , 3].join()); // '1,,3'
+console.log([1, undefined, 3].join()); // '1,,3'
+console.log([1, null, 3].join());
 
 
+// ---at---//
+const cart = ["apple", "banana", "pear","kiwee"];
+
+function returnLast(arr) {
+  // return arr.at(-1);
+  return arr.at(3);
+}
+const item1 = returnLast(cart);
+console.log(item1); 
