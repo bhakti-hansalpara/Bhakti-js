@@ -195,3 +195,16 @@ const withoutVowels = words.map(word => word.replace(/[aeiou]/gi, ''));
 console.log(withoutVowels); // Output: ['ppl', 'bnn', 'rng']
 
 
+
+const person = { name: 'John', age: 30, profession: 'Developer' };
+
+const uppercasedPerson = Object.entries(person).map(([key, value]) => ({
+  [key]: value.toUpperCase()
+}));
+
+console.log(uppercasedPerson); 
+// [{ name: 'JOHN' }, { age: '30' }, { profession: 'DEVELOPER' }]
+
+// [{ name: 'JOHN' }, { age: '30' }, { profession: 'DEVELOPER' }]
+
+  
