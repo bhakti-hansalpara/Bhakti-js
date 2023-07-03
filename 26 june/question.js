@@ -4,19 +4,27 @@
 // Object.assign(target, source);
 // console.log(target); //ans=b:2, a:1}
 
-// const source = { a: 1 };
-// const target = { b: 2 };
-// Object.assign(source,target);
-// console.log(target);
-// console.log(source);
+const obj1={a:1, b:2};
+const obj2={a:5, b:6};
+const obj3=Object.assign(obj1,obj2)
+obj2.a=20;
+console.log(obj1);
+console.log(obj2);
+console.log(obj3); 
+
+const source = { a: 1 };
+const target = { b: 2 };
+Object.assign(source,target);
+console.log(target);
+console.log(source);
 
 // 2
-// const obj1 = { a: 12, b: 23 };
-// const obj2 = obj1;
-// const obj3 = { ...obj1 };
-// // console.log(obj3);
-// obj1.c = 23;
-// console.log(obj1.c, obj2.c, obj3.c);//here objc is value from obj3 refrence than in c is not 
+const obj1 = { a: 12, b: 23 };
+const obj2 = obj1;
+const obj3 = { ...obj1 };
+// console.log(obj3);
+obj1.c = 23;
+console.log(obj1.c, obj2.c, obj3.c);//here objc is value from obj3 refrence than in c is not 
 
 // 3
 // const obj1 = { a: 12, b: 23 };
@@ -43,10 +51,10 @@
 
 
 // 6
-// const source = { a: { b: 1 } };
-// const target = {};
-// Object.assign(target, source);
-// console.log(target);//ans={a:{b:1}}
+const source = { a: { b: 1 } };
+const target = {};
+Object.assign(target, source);
+console.log(target);//ans={a:{b:1}}
 
 
 // 7

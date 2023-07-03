@@ -109,9 +109,7 @@
 //   toppingChocolate(donuts);
 
 // console.log(toppingChocolate);
-const arr=[];
-arr.filter(item1 =>item1.topping.filter(top=>topping.type===value));
-J
+
 
 //2
 // const result = donuts.filter(donut => donut.batters.batter.some(batter => batter.type === 'Regular')
@@ -235,13 +233,91 @@ J
 // console.log(newObj);
 
 //count the total average of each category price.
-function makeNewObject(arrayName){
-    let newObject={};
+// function makeNewObject(arrayName){
+//     let newObject={};
 
-}
+// }
   
+// // ----Q 10 B----//
+// const countByCategory = {};
+// const totalByCategory = {};
 
+// for (let product of products) {
+//   const category = product.category;
+//   const price = product.price;
+
+//   if (countByCategory[category]) {
+//     countByCategory[category]++;
+//     totalByCategory[category] += price;
+//   } else {
+//     countByCategory[category] = 1;
+//     totalByCategory[category] = price;
+//   }
+// }
+
+// const averageByCategory = {};
+
+// for (let category in countByCategory) {
+//   const totalCount = countByCategory[category];
+//   const totalPrice = totalByCategory[category];
+//   const averagePrice = totalPrice / totalCount;
+//   averageByCategory[category] = averagePrice;
+// }
+
+// console.log(averageByCategory);
+
+// ----q 11----//
+// function shortenWords(sentence) {
+//   let words = sentence.split(' ');
+//   let result = words.map(word => {
+//     if (word.length > 3) {
+//       return word.charAt(0) + (word.length - 2) + word.charAt(word.length - 1);
+//     } else {
+//       return word;
+//     }
+//   });
+//   return result.join(' ');
+// }
+// let input = "Every developer likes to mix kubernetes and javascript";
+// let output = shortenWords(input);
+// console.log(output); // Output: "E3y d7r l3s to mix k8s and j8t"
   
-
+// ------Q 13-----//
+const employees = [
+    { name: "John", salary: 50000, department: "IT" },
+    { name: "Jane", salary: 60000, department: "HR" },
+    { name: "Bob", salary: 55000, department: "IT" },
+    { name: "Sophie", salary: 75000, department: "HR" },
+    { name: "Mike", salary: 65000, department: "IT" },
+    { name: "Emily", salary: 80000, department: "HR" },
+    { name: "David", salary: 70000, department: "IT" },
+  ];
+  
+  const totalSalaryByDepartment = {};
+  const countByDepartment = {};
+  
+  for (let employee of employees) {
+    const department = employee.department;
+    const salary = employee.salary;
+  
+    if (totalSalaryByDepartment[department]) {
+      totalSalaryByDepartment[department] += salary;
+      countByDepartment[department]++;
+    } else {
+      totalSalaryByDepartment[department] = salary;
+      countByDepartment[department] = 1;
+    }
+  }
+  
+  const averageSalaryByDepartment = {};
+  
+  for (let department in totalSalaryByDepartment) {
+    const totalSalary = totalSalaryByDepartment[department];
+    const employeeCount = countByDepartment[department];
+    const averageSalary = totalSalary / employeeCount;
+    averageSalaryByDepartment[department] = averageSalary;
+  }
+  
+  console.log(averageSalaryByDepartment);
 
 
