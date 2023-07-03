@@ -147,14 +147,14 @@
 //   printItems(nestedObject);
   
 //  6
-//  function containsNumbers(array) {
-//     for (let i = 0; i < array.length; i++) {
-//       if (typeof array[i] === "number" && !isNaN(array[i])) {
-//         return true;
-//       }
-//     }
-//     return false;
-//   }
+ function containsNumbers(array) {
+    for (let i = 0; i < array.length; i++) {
+      if (typeof array[i] === "number" && !isNaN(array[i])) {
+        return true;
+      }
+    }
+    return false;
+  }
   
 //   // Test cases
 //   console.log(containsNumbers([1, 2, 3]));            // true
@@ -163,17 +163,38 @@
 //   console.log(containsNumbers(["a", '3df', "gh"]));   // false
 
   
-//   //arrow function
-//   function containsNumbers(array) {
-//     return array.some(item => typeof item === "number" && !isNaN(item));
-//   }
+  //arrow function
+  function containsNumbers(array) {
+    return array.find(item => typeof item === "number" && !isNaN(item));
+  }
   
-//   // Test cases
-//   console.log(containsNumbers([1, 2, 3]));            // true
-//   console.log(containsNumbers(["1", "a", "h"]));      // false
-//   console.log(containsNumbers(["a", 3, "gh"]));       // true
-//   console.log(containsNumbers(["a", '3df', "gh"]));   // false
+  // Test cases
+  console.log(containsNumbers([1, 2, 3]));            // true
+  console.log(containsNumbers(["1", "a", "h"]));      // false
+  console.log(containsNumbers(["a", 3, "gh"]));       // true
+  console.log(containsNumbers(["a", '3df', "gh"]));   // false
   
+
+  7
+  const numbers = [1, 2, 3, 4];
+const convertedNumbers = numbers.map((num) => String(num));
+
+console.log(convertedNumbers); // ["1", "2", "3", "4"]
+
+8
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map((num, index, array) => {
+  array.push(num * 2);
+  return num * 2;
+});
+console.log(numbers, doubled);
+//output-[
+//   1, 2, 3, 4,
+//   2, 4, 6, 8
+// ] [ 2, 4, 6, 8 ]  it get new array
+
+
+
 //  9
 // //  filter donuts based on which have topping  Chocolate
 
