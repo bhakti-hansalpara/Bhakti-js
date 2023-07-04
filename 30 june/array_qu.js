@@ -443,5 +443,38 @@ const squaredNumbers = myMap((x) => x * x, numbers);
 console.log(squaredNumbers);  // Output: [1, 4, 9, 16, 25]
 
 18
-
+const input = [
+    { name: "John", salary: 50000, department: "IT" },
+    { name: "Jane", salary: 60000, department: "HR" },
+    { name: "Bob", salary: 55000, department: "IT" },
+    { name: "Bbhakti", salary: 55000, department: "IT" },
+    { name: "Sophie", salary: 75000, department: "HR" },
+    { name: "Mike", salary: 65000, department: "IT" },
+    { name: "Emily", salary: 80000, department: "HR" },
+    { name: "David", salary: 70000, department: "IT" },
+  ];
   
+//   const groupedData = {};
+  
+//   input.forEach((item) => {
+//     const firstLetter = item.name.charAt(0).toUpperCase();
+//     if (!groupedData[firstLetter]) {
+//       groupedData[firstLetter] = [];
+//     }
+//     groupedData[firstLetter].push(item);
+//   });
+  
+//   console.log(groupedData);
+  
+// 18-2
+const groupedData = {};
+
+input.forEach((item) => {
+  const department = item.department;
+  if (!groupedData[department]) {
+    groupedData[department] = [];
+  }
+  groupedData[department].push(item);
+});
+
+console.log(groupedData);  
