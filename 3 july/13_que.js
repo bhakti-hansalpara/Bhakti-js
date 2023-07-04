@@ -164,8 +164,8 @@
 // 2nd
 // 9-b
 // const A = donuts.find(donut => {
-//     const hasRegularBatter = donut.batters.batter.some(batter => batter.type === "Regular");
-//     const hasChocolateTopping = donut.topping.some(topping => topping.type === "Chocolate");
+//     const hasRegularBatter = donut.batters.batter.find(batter => batter.type === "Regular");
+//     const hasChocolateTopping = donut.topping.find(topping => topping.type === "Chocolate");
 //     return hasRegularBatter && hasChocolateTopping;
 //   });
 //   console.log(A);
@@ -188,7 +188,31 @@
 // const result = donuts.filter(donut => donut.batters.batter.length >= 2);
 // console.log(result);
   
- 
+//  -------using find-------//
+//1
+// const chocolateDonuts = donut.filter(donut => {
+//     return donut.topping.find(topping => topping.type === "Chocolate");
+//   });
+  
+//   console.log(chocolateDonuts);
+
+//2
+// const filter = donut.filter(donut => {
+//     const a = donut.batters.batter.find(batter => batter.type === "Regular");
+//     const b = donut.topping.find(topping => topping.type === "Chocolate");
+//     return a && b;
+//   });
+  
+//   console.log(filter)
+
+// 3
+// const filter = donut.filter(donut => {
+//     const a = donut.topping.find(topping => topping.type === "Chocolate");
+//     const b = donut.topping.find(topping => topping.type === "Sugar");
+//     return a && b;
+//   });
+  
+//   console.log(filter);
 
 // 10
 // // Function to get name initials
@@ -332,27 +356,7 @@
 //   { name: "Emily", salary: 80000, department: "HR" },
 //   { name: "David", salary: 70000, department: "IT" },
 // ];
-
-// // 2
-// function propertyCounter(arrayName) {
-//       let newObject = {};
-//       let IT = arrayName.filter(value => value.department == "IT");
-//       let HR = arrayName.filter(value => value.department == "HR");
-//       let a = arrayName.salary;
-//       let b = arrayName.salary;
-//       newObject.IT = a;
-//       newObject.HR = b;
-//       return newObject 
-//   }
-//   console.log(propertyCounter(employees));
-
-// function departWiseSalary(arr) {
-//   let a = arr.filter(val => val.department === "IT").map(val => val.salary)
-//   let b = arr.filter(val => val.department === "HR").map(val => val.salary)
-//   let c = {IT:a,HR:b};
-//   return c
-// }
-// console.log(departWiseSalary(employees));
+//1
 
 // // count the average salary of each department
 // function averagePrice(employees) {
@@ -376,10 +380,30 @@
 //   let aveObject = averagePrice(employees);
 //   console.log(aveObject);
 
+// // 2
+// function propertyCounter(arrayName) {
+//       let newObject = {};
+//       let IT = arrayName.filter(value => value.department == "IT");
+//       let HR = arrayName.filter(value => value.department == "HR");
+//       let a = arrayName.salary;
+//       let b = arrayName.salary;
+//       newObject.IT = a;
+//       newObject.HR = b;
+//       return newObject 
+//   }
+//   console.log(propertyCounter(employees));
+
+// function departWiseSalary(arr) {
+//   let a = arr.filter(val => val.department === "IT").map(val => val.salary)
+//   let b = arr.filter(val => val.department === "HR").map(val => val.salary)
+//   let c = {IT:a,HR:b};
+//   return c
+// }
+// console.log(departWiseSalary(employees));
 
 
 
-
+// -for practice-//
 // const names = ["bhakti", "amit", "krishna", "jeel","amisha", "zinkal", "hiral"];
 
 // const sortedNames = names.sort();
@@ -416,16 +440,7 @@
 //   }
   
 //   const strings = [
-//     "Jeel",
-//     "Prakhar",
-//     "Bhakti",
-//     "Vansh",
-//     "Meghna",
-//     "Bhaumik",
-//     "Pujan",
-//     "Rudra",
-//     "Sachin",
-//     "Dhruval",
+//     "Jeel",   "Prakhar", "Bhakti",  "Vansh", "Meghna",  "Bhaumik",   "Pujan", "Rudra","Sachin","Dhruval",
 //   ];
 //   const groupedData = groupDataByFirstLetter(strings);
   
