@@ -195,13 +195,7 @@ console.log(numbers, doubled);
 
 
 
-//  9
-// //  filter donuts based on which have topping  Chocolate
 
-
-// filtered_donuts = [donut for donut in donuts if any(topping["type"] == "Chocolate" for topping in donut["topping"])]
-
-// print(filtered_donuts) 
 
 
 
