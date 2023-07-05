@@ -94,6 +94,112 @@ function transformString(input) {
 console.log(transformString("Every developer likes to mix kubernetes and javascript"));
 
 //12
+const products = [
+  { name: "Product 1", price: 20, category: "Electronics",ca:"cs" },
+  { name: "Product 2", price: 30, category: "Clothes" },
+  { name: "Product 3", price: 40, category: "Electronics" },
+  { name: "Product 4", price: 50, category: "Clothes" },
+  { name: "Product 5", price: 60, category: "Clothes" },
+  { name: "Product 6", price: 70, category: "Electronics" },
+  { name: "Product 6", price: 70, category: "Electronics" },
+  { name: "Product 6", price: 70, category: "Electronics" },
+  { name: "Product 6", price: 70, category: "Electronics" },
+
+  { name: "Product 7", price: 80, category: "Clothes" },
+  { name: "Product 8", price: 90, category: "Electronics" },
+];
+
+const categoryCount = products.reduce((count, product) => {
+  count[product.category] = (count[product.category] || 0) + 1;
+  return count;
+}, {});
+
+console.log(categoryCount);
+
+
+//14
+function groupByFirstLetter(names) {
+  const groupedData = names.reduce((acc, name) => {
+    const firstLetter = name.charAt(0).toUpperCase();
+    
+    if (!acc[firstLetter]) {
+      acc[firstLetter] = [];
+    }
+    
+    acc[firstLetter].push(name);
+    
+    return acc;
+  }, {});
+  
+  return groupedData;
+}
+
+// Test case
+const names = ["Jeel", "Prakhar", "Bhakti", "Vansh", "Meghna", "Bhaumik", "Pujan", "Rudra", "Sachin", "Dhruval"];
+const result = groupByFirstLetter(names);
+console.log(result);
+
+//18
+function groupByFirstLetter(data) {
+  const groupedData = data.reduce((acc, item) => {
+    const firstLetter = item.name.charAt(0).toUpperCase();
+
+    if (!acc[firstLetter]) {
+      acc[firstLetter] = [];
+    }
+
+    acc[firstLetter].push(item);
+
+    return acc;
+  }, {});
+
+  return groupedData;
+}
+
+// Test case
+const input = [
+  { name: "John", salary: 50000, department: "IT" },
+  { name: "Jane", salary: 60000, department: "HR" },
+  { name: "Bob", salary: 55000, department: "IT" },
+  { name: "Sophie", salary: 75000, department: "HR" },
+  { name: "Mike", salary: 65000, department: "IT" },
+  { name: "Emily", salary: 80000, department: "HR" },
+  { name: "David", salary: 70000, department: "IT" },
+];
+
+const result = groupByFirstLetter(input);
+console.log(result);
+
+//19
+const input = [
+  { name: "John", salary: 50000, department: "IT" },
+  { name: "Jane", salary: 60000, department: "HR" },
+  { name: "Bob", salary: 55000, department: "IT" },
+  { name: "Sophie", salary: 75000, department: "HR" },
+  { name: "Mike", salary: 65000, department: "IT" },
+  { name: "Emily", salary: 80000, department: "HR" },
+  { name: "David", salary: 70000, department: "IT" },
+];
+function groupByDepartment(data) {
+  const groupedData = data.reduce((acc, item) => {
+    const department = item.department;
+
+    if (!acc[department]) {
+      acc[department] = [];
+    }
+
+    acc[department].push(item);
+
+    return acc;
+  }, {});
+
+  return groupedData;
+}
+const result = groupByDepartment(input);
+console.log(result);
+
+
+
 
 
 

@@ -148,159 +148,159 @@
 //   printItems(nestedObject);
   
 //  6
-function containsNumbers(array) {
-  for (let i = 0; i < array.length; i++) {
-    if (typeof array[i] === "number" && !isNaN(array[i])) {
-      return true;
-    }
-  }
-  return false;
-}
+// function containsNumbers(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     if (typeof array[i] === "number" && !isNaN(array[i])) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 
-//   // Test cases
-//   console.log(containsNumbers([1, 2, 3]));            // true
-//   console.log(containsNumbers(["1", "a", "h"]));      // false
-//   console.log(containsNumbers(["a", 3, "gh"]));       // true
-//   console.log(containsNumbers(["a", '3df', "gh"]));   // false
-
-
-//arrow function
-function containsNumbers(array) {
-  return array.find(item => typeof item === "number" && !isNaN(item));
-}
-
-// Test cases
-console.log(containsNumbers([1, 2, 3]));            // true
-console.log(containsNumbers(["1", "a", "h"]));      // false
-console.log(containsNumbers(["a", 3, "gh"]));       // true
-console.log(containsNumbers(["a", '3df', "gh"]));   // false
+// //   // Test cases
+// //   console.log(containsNumbers([1, 2, 3]));            // true
+// //   console.log(containsNumbers(["1", "a", "h"]));      // false
+// //   console.log(containsNumbers(["a", 3, "gh"]));       // true
+// //   console.log(containsNumbers(["a", '3df', "gh"]));   // false
 
 
-7
-const numbers = [1, 2, 3, 4];
-const convertedNumbers = numbers.map((num) => String(num));
+// //arrow function
+// function containsNumbers(array) {
+//   return array.find(item => typeof item === "number" && !isNaN(item));
+// }
 
-console.log(convertedNumbers); // ["1", "2", "3", "4"]
+// // Test cases
+// console.log(containsNumbers([1, 2, 3]));            // true
+// console.log(containsNumbers(["1", "a", "h"]));      // false
+// console.log(containsNumbers(["a", 3, "gh"]));       // true
+// console.log(containsNumbers(["a", '3df', "gh"]));   // false
 
-8
-const numbers = [1, 2, 3, 4];
-const doubled = numbers.map((num, index, array) => {
-array.push(num * 2);
-return num * 2;
-});
-console.log(numbers, doubled);
-//output-[
-//   1, 2, 3, 4,
-//   2, 4, 6, 8
-// ] [ 2, 4, 6, 8 ]  it get new array
-// 4
-[
-	{
-		"id": "0001",
-		"type": "donut",
-		"name": "Cake",
-		"ppu": 0.55,
-		"batters":
-		{
-			"batter":
-				[
-					{ "id": "1001", "type": "Regular" },
-					{ "id": "1002", "type": "Chocolate" },
-					{ "id": "1003", "type": "Blueberry" },
-					{ "id": "1004", "type": "Devil's Food" }
-				]
-		},
-		"topping":
-			[
-				{ "id": "5001", "type": "None" },
-				{ "id": "5002", "type": "Glazed" },
-				{ "id": "5005", "type": "Sugar" },
-				{ "id": "5007", "type": "Powdered Sugar" },
-				{ "id": "5006", "type": "Chocolate with Sprinkles" },
-				{ "id": "5003", "type": "Chocolate" },
-				{ "id": "5004", "type": "Maple" }
-			]
-	},
-	{
-		"id": "0002",
-		"type": "donut2",
-		"name": "Raised",
-		"ppu": 0.55,
-		"batters":
-		{
-			"batter":
-				[
-					{ "id": "1001", "type": "Regular" }
-				]
-		},
-		"topping":
-			[
-				{ "id": "5001", "type": "None" },
-				{ "id": "5002", "type": "Glazed" },
-				{ "id": "5005", "type": "Sugar" },
-				{ "id": "5003", "type": "Chocolate" },
-				{ "id": "5004", "type": "Maple" }
-			]
-	},
-	{
-		"id": "0003",
-		"type": "donut3",
-		"name": "Old Fashioned",
-		"ppu": 0.55,
-		"batters":
-		{
-			"batter":
-				[
-					{ "id": "1001", "type": "Regular" },
-					{ "id": "1002", "type": "Chocolate" }
-				]
-		},
-		"topping":
-			[
-				{ "id": "5001", "type": "None" },
-				{ "id": "5002", "type": "Glazed" },
-				{ "id": "5003", "type": "Chocolate" },
-				{ "id": "5004", "type": "Maple" }
-			]
-	},
-	{
-		"id": "0004",
-		"type": "donut1",
-		"name": "Old Fashioned",
-		"ppu": 0.55,
-		"batters":
-		{
-			"batter":
-				[
-					{ "id": "1001", "type": "Regular" }
-				]
-		},
-		"topping":
-			[
-				{ "id": "5001", "type": "None" },
-				{ "id": "5002", "type": "Glazed" },
-				{ "id": "5003", "type": "Chocolate" },
-				{ "id": "5004", "type": "Maple" }
-			]
-	}
-]
- 1
-function toppingChocolate(array) {
-    let a = donuts.filter((value, index, arr) => {
-        let topping = value.topping;
-        for (let i = 0; i < topping.length; i++) {
-            if (topping[i].type == "Chocolate"){
-                console.log(value.type+":");
-                console.log(value);
-                return value;
-            }
-        }
-    });
-    console.log(a);
-  }
-  toppingChocolate(donuts);
 
-console.log(toppingChocolate);
+// 7
+// const numbers = [1, 2, 3, 4];
+// const convertedNumbers = numbers.map((num) => String(num));
+
+// console.log(convertedNumbers); // ["1", "2", "3", "4"]
+
+// 8
+// const numbers = [1, 2, 3, 4];
+// const doubled = numbers.map((num, index, array) => {
+// array.push(num * 2);
+// return num * 2;
+// });
+// console.log(numbers, doubled);
+// //output-[
+// //   1, 2, 3, 4,
+// //   2, 4, 6, 8
+// // ] [ 2, 4, 6, 8 ]  it get new array
+// // 4
+// [
+// 	{
+// 		"id": "0001",
+// 		"type": "donut",
+// 		"name": "Cake",
+// 		"ppu": 0.55,
+// 		"batters":
+// 		{
+// 			"batter":
+// 				[
+// 					{ "id": "1001", "type": "Regular" },
+// 					{ "id": "1002", "type": "Chocolate" },
+// 					{ "id": "1003", "type": "Blueberry" },
+// 					{ "id": "1004", "type": "Devil's Food" }
+// 				]
+// 		},
+// 		"topping":
+// 			[
+// 				{ "id": "5001", "type": "None" },
+// 				{ "id": "5002", "type": "Glazed" },
+// 				{ "id": "5005", "type": "Sugar" },
+// 				{ "id": "5007", "type": "Powdered Sugar" },
+// 				{ "id": "5006", "type": "Chocolate with Sprinkles" },
+// 				{ "id": "5003", "type": "Chocolate" },
+// 				{ "id": "5004", "type": "Maple" }
+// 			]
+// 	},
+// 	{
+// 		"id": "0002",
+// 		"type": "donut2",
+// 		"name": "Raised",
+// 		"ppu": 0.55,
+// 		"batters":
+// 		{
+// 			"batter":
+// 				[
+// 					{ "id": "1001", "type": "Regular" }
+// 				]
+// 		},
+// 		"topping":
+// 			[
+// 				{ "id": "5001", "type": "None" },
+// 				{ "id": "5002", "type": "Glazed" },
+// 				{ "id": "5005", "type": "Sugar" },
+// 				{ "id": "5003", "type": "Chocolate" },
+// 				{ "id": "5004", "type": "Maple" }
+// 			]
+// 	},
+// 	{
+// 		"id": "0003",
+// 		"type": "donut3",
+// 		"name": "Old Fashioned",
+// 		"ppu": 0.55,
+// 		"batters":
+// 		{
+// 			"batter":
+// 				[
+// 					{ "id": "1001", "type": "Regular" },
+// 					{ "id": "1002", "type": "Chocolate" }
+// 				]
+// 		},
+// 		"topping":
+// 			[
+// 				{ "id": "5001", "type": "None" },
+// 				{ "id": "5002", "type": "Glazed" },
+// 				{ "id": "5003", "type": "Chocolate" },
+// 				{ "id": "5004", "type": "Maple" }
+// 			]
+// 	},
+// 	{
+// 		"id": "0004",
+// 		"type": "donut1",
+// 		"name": "Old Fashioned",
+// 		"ppu": 0.55,
+// 		"batters":
+// 		{
+// 			"batter":
+// 				[
+// 					{ "id": "1001", "type": "Regular" }
+// 				]
+// 		},
+// 		"topping":
+// 			[
+// 				{ "id": "5001", "type": "None" },
+// 				{ "id": "5002", "type": "Glazed" },
+// 				{ "id": "5003", "type": "Chocolate" },
+// 				{ "id": "5004", "type": "Maple" }
+// 			]
+// 	}
+// ]
+//  1
+// function toppingChocolate(array) {
+//     let a = donuts.filter((value, index, arr) => {
+//         let topping = value.topping;
+//         for (let i = 0; i < topping.length; i++) {
+//             if (topping[i].type == "Chocolate"){
+//                 console.log(value.type+":");
+//                 console.log(value);
+//                 return value;
+//             }
+//         }
+//     });
+//     console.log(a);
+//   }
+//   toppingChocolate(donuts);
+
+// console.log(toppingChocolate);
 
 
 //2
@@ -352,24 +352,24 @@ console.log(toppingChocolate);
 //   ------ Q 11-------//
 
 
-function convertToNumbers(sentence) {
-    const words = sentence.split(" ");
-    const convertedWords = words.map(word => {
-      if (word.length <= 2) {
-        return word; // Do not convert if word has 2 or fewer characters
-      } else {
-        const firstChar = word[0];
-        const lastChar = word[word.length - 1];
-        const middleChars = (word.length - 2).toString();
-        return `${firstChar}${middleChars}${lastChar}`;
-      }
-    });
-    return convertedWords.join(" ");
-  }
+// function convertToNumbers(sentence) {
+//     const words = sentence.split(" ");
+//     const convertedWords = words.map(word => {
+//       if (word.length <= 2) {
+//         return word; // Do not convert if word has 2 or fewer characters
+//       } else {
+//         const firstChar = word[0];
+//         const lastChar = word[word.length - 1];
+//         const middleChars = (word.length - 2).toString();
+//         return `${firstChar}${middleChars}${lastChar}`;
+//       }
+//     });
+//     return convertedWords.join(" ");
+//   }
   
-  const sentence = "Every developer likes to mix kubernetes and javascript";
-  const convertedSentence = convertToNumbers(sentence);
-  console.log(convertedSentence);
+//   const sentence = "Every developer likes to mix kubernetes and javascript";
+//   const convertedSentence = convertToNumbers(sentence);
+//   console.log(convertedSentence);
   
 // //   -------Q 12--------//
 // function convertToNumbers(sentence) {
@@ -505,147 +505,148 @@ function convertToNumbers(sentence) {
 
 //   ------------?---------------//
 //when null and undefined it not give any error it will run
-const obj = {
-    a: {
-      b: [
-        { name: "Jenny" },
-        { name: "Janu" },
-        { name: "jenisha" }
-      ]
-    }
-  };
+// const obj = {
+//     a: {
+//       b: [
+//         { name: "Jenny" },
+//         { name: "Janu" },
+//         { name: "jenisha" }
+//       ]
+//     }
+//   };
   
-  const names = obj?.a?.b?.map(item => item.name);
-  console.log(names);
+//   const names = obj?.a?.b?.map(item => item.name);
+//   console.log(names);
   
-// 14
-function groupDataByFirstLetter(strings) {
-    const groupedData = {};
+// // 14
+// function groupDataByFirstLetter(strings) {
+//     const groupedData = {};
   
-    strings.forEach((str1) => {
-      const firstLetter = str1.charAt(0).toUpperCase();
-      if (groupedData[firstLetter]) {
-        groupedData[firstLetter].push(str1);
-      } else {
-        groupedData[firstLetter] = [str1];
-      }
-    });
+//     strings.forEach((str1) => {
+//       const firstLetter = str1.charAt(0).toUpperCase();
+//       if (groupedData[firstLetter]) {
+//         groupedData[firstLetter].push(str1);
+//       } else {
+//         groupedData[firstLetter] = [str1];
+//       }
+//     });
   
-    return groupedData;
-  }
+//     return groupedData;
+//   }
   
-  const strings = [
-    "Jeel",
-    "Prakhar",
-    "Bhakti",
-    "Vansh",
-    "Meghna",
-    "Bhaumik",
-    "Pujan",
-    "Rudra",
-    "Sachin",
-    "Dhruval",
-  ];
-  const groupedData = groupDataByFirstLetter(strings);
+//   const strings = [
+//     "Jeel",
+//     "Prakhar",
+//     "Bhakti",
+//     "Vansh",
+//     "Meghna",
+//     "Bhaumik",
+//     "Pujan",
+//     "Rudra",
+//     "Sachin",
+//     "Dhruval",
+//   ];
+//   const groupedData = groupDataByFirstLetter(strings);
   
-  console.log(groupedData);
+//   console.log(groupedData);
 
-//   15
-function flat(arr) {
-    const flattened = [];
+// //   15
+// function flat(arr) {
+//     const flattened = [];
   
-    arr.forEach((item) => {
-      if (Array.isArray(item)) {
-        flattened.push(...flat(item));
-      } else {
-        flattened.push(item);
-      }
-    });
+//     arr.forEach((item) => {
+//       if (Array.isArray(item)) {
+//         flattened.push(...flat(item));
+//       } else {
+//         flattened.push(item);
+//       }
+//     });
   
-    return flattened;
-  }
+//     return flattened;
+//   }
   
-  const nestedArray = [1, [2, [3, [4, 5], 6], 7], 8, [9, 10]];
-  const flattenedArray = flat(nestedArray);
+//   const nestedArray = [1, [2, [3, [4, 5], 6], 7], 8, [9, 10]];
+//   const flattenedArray = flat(nestedArray);
   
-  console.log(flattenedArray);
+//   console.log(flattenedArray);
 
-//   ----with depth----//
-function flat(arr, depth = 1) {
-    const flattened = [];
+// //   ----with depth----//
+// function flat(arr, depth = 1) {
+//     const flattened = [];
   
-    arr.forEach((item) => {
-      if (Array.isArray(item) && depth > 0) {
-        flattened.push(...flat(item, depth - 1));
-      } else {
-        flattened.push(item);
-      }
-    });
+//     arr.forEach((item) => {
+//       if (Array.isArray(item) && depth > 0) {
+//         flattened.push(...flat(item, depth - 1));
+//       } else {
+//         flattened.push(item);
+//       }
+//     });
   
-    return flattened;
-  }
+//     return flattened;
+//   }
   
-  const nestedArray = [1, [2, [3, [4, 5], 6], 7], 8, [9, 10]];
-  const flattenedArray = flat(nestedArray, 2);
+//   const nestedArray = [1, [2, [3, [4, 5], 6], 7], 8, [9, 10]];
+//   const flattenedArray = flat(nestedArray, 2);
   
-  console.log(flattenedArray);
+//   console.log(flattenedArray);
 
   
-  16
-//   ----filter-----//
-function myFilter(condition, array) {
-    const filteredArray = [];
-    for (let i = 0; i < array.length; i++) {
-      if (condition(array[i])) {
-        filteredArray.push(array[i]);
-      }
-    }
-    return filteredArray;
-  }
+//   16
+// //   ----filter-----//
+// function myFilter(condition, array) {
+//     const filteredArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//       if (condition(array[i])) {
+//         filteredArray.push(array[i]);
+//       }
+//     }
+//     return filteredArray;
+//   }
 
-//   for ex=
-const numbers = [1, 2, 3, 4, 5, 6];
+// //   for ex=
+// const numbers = [1, 2, 3, 4, 5, 6];
 
-// Filter even numbers
-const filteredNumbers = myFilter((x) => x % 2 === 0, numbers);
-console.log(filteredNumbers);  // Output: [2, 4, 6]
+// // Filter even numbers
+// const filteredNumbers = myFilter((x) => x % 2 === 0, numbers);
+// console.log(filteredNumbers);  // Output: [2, 4, 6]
 
-// Filter odd numbers
-const filteredNumbers = myFilter((x) => x % 2 !== 0, numbers);
-console.log(filteredNumbers);  // Output: [1, 3, 5]
+// // Filter odd numbers
+// const filteredNumbers = myFilter((x) => x % 2 !== 0, numbers);
+// console.log(filteredNumbers);  // Output: [1, 3, 5]
 
-17
-// ----map----//
-function myMap(transform, array) {
-    const mappedArray = [];
-    for (let i = 0; i < array.length; i++) {
-      mappedArray.push(transform(array[i]));
-    }
-    return mappedArray;
-  }
+// 17
+// // ----map----//
+// function myMap(transform, array) {
+//     const mappedArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//       mappedArray.push(transform(array[i]));
+//     }
+//     return mappedArray;
+//   }
+//   s@3culum16
 
-//   for ex=
-const numbers = [1, 2, 3, 4, 5];
+// //   for ex=
+// const numbers = [1, 2, 3, 4, 5];
 
-// Double each number
-const doubledNumbers = myMap((x) => x * 2, numbers);
-console.log(doubledNumbers);  // Output: [2, 4, 6, 8, 10]
+// // Double each number
+// const doubledNumbers = myMap((x) => x * 2, numbers);
+// console.log(doubledNumbers);  // Output: [2, 4, 6, 8, 10]
 
 // Square each number
-const squaredNumbers = myMap((x) => x * x, numbers);
-console.log(squaredNumbers);  // Output: [1, 4, 9, 16, 25]
+// const squaredNumbers = myMap((x) => x * x, numbers);
+// console.log(squaredNumbers);  // Output: [1, 4, 9, 16, 25]
 
-18
-const input = [
-    { name: "John", salary: 50000, department: "IT" },
-    { name: "Jane", salary: 60000, department: "HR" },
-    { name: "Bob", salary: 55000, department: "IT" },
-    { name: "Bbhakti", salary: 55000, department: "IT" },
-    { name: "Sophie", salary: 75000, department: "HR" },
-    { name: "Mike", salary: 65000, department: "IT" },
-    { name: "Emily", salary: 80000, department: "HR" },
-    { name: "David", salary: 70000, department: "IT" },
-  ];
+// 18
+// const input = [
+//     { name: "John", salary: 50000, department: "IT" },
+//     { name: "Jane", salary: 60000, department: "HR" },
+//     { name: "Bob", salary: 55000, department: "IT" },
+//     { name: "Bbhakti", salary: 55000, department: "IT" },
+//     { name: "Sophie", salary: 75000, department: "HR" },
+//     { name: "Mike", salary: 65000, department: "IT" },
+//     { name: "Emily", salary: 80000, department: "HR" },
+//     { name: "David", salary: 70000, department: "IT" },
+//   ];
   
 //   const groupedData = {};
   
@@ -704,8 +705,278 @@ const input = [
   //beacuse of distrucring of object
 
 //23
+// Find the Sum of Squares 
+// let arr = [1,2,3,4,5] => ans : 55
 
-  
+  // let arr=[1,2,3,4,5];
+  // let result=arr.reduce((acc,cur)=>{
+  //   return acc+cur*cur;
+  // },0);
+  // console.log(result); //=>55
+
+//24
+// const students = [
+//   { name: 'Alice', age: 20, grade: 'A' },
+//   { name: 'Bob', age: 18, grade: 'D' },
+//   { name: 'Charlie', age: 19, grade: 'A' },
+//   { name: 'David', age: 20, grade: 'c' },
+// ];
+	// => sort by age
+  // students.sort((a,b)=>a.age-b.age);
+  // console.log(students);
+
+//=>sort by grade
+// --1st take--//
+// students.sort((a,b)=>{
+//   const gread={
+//     A:1,
+//     B:2,
+//     C:3,
+//     // D:4,
+//   };
+//   return gread[a.grade]-gread[b.grade]
+// });
+// console.log(students);
+// ---2nd take---//
+// function sortByGrade(array) {
+//     let res = array.sort((a,b) => a.grade.charCodeAt(0) - b.grade.charCodeAt(0));
+//     return res;
+// }
+// console.log(sortByGrade(students));
+//---3rd take---//
+// const students = [
+//   { name: 'Alice', age: 20, grade: 'A' },
+//   { name: 'Bob', age: 18, grade: 'B' },
+//   { name: 'Charlie', age: 19, grade: 'D' },
+//   { name: 'David', age: 20, grade: 'C' },
+// ];
+
+// students.sort((a, b) => {
+//   const gradeOrder = ['A', 'B', 'C']; // Specify the desired order of grades
+
+//   const gradeIndexA = gradeOrder.indexOf(a.grade);
+//   const gradeIndexB = gradeOrder.indexOf(b.grade);
+
+//   return gradeIndexA - gradeIndexB;
+// });
+
+// console.log(students);
+//it not vaild for other input it is fix//
+
+//sort name
+// const students = [
+//   { name: 'Alice', age: 20, grade: 'A' },
+//   { name: 'Bob', age: 18, grade: 'B' },
+//   { name: 'Charlie', age: 19, grade: 'A' },
+//   { name: 'David', age: 20, grade: 'C' },
+// ];
+
+// students.sort((a, b) => {
+//   const nameA = a.name.toLowerCase();
+//   const nameB = b.name.toLowerCase();
+
+//   if (nameA < nameB) {
+//     return -1;
+//   }
+//   if (nameA > nameB) {
+//     return 1;
+//   }
+//   return 0;
+// });
+
+// console.log(students);
+
+//avg of age
+// const students = [
+//   { name: 'Alice', age: 20, grade: 'A' },
+//   { name: 'Bob', age: 18, grade: 'B' },
+//   { name: 'Charlie', age: 19, grade: 'A' },
+//   { name: 'David', age: 20, grade: 'C' },
+// ];
+
+// const totalAges = students.reduce((sum, student) => sum + student.age,0);
+// const averageAge = totalAges / students.length;
+
+// console.log(averageAge);
+
+//sum of ages
+// const students = [
+//   { name: 'Alice', age: 20, grade: 'A' },
+//   { name: 'Bob', age: 18, grade: 'B' },
+//   { name: 'Charlie', age: 19, grade: 'A' },
+//   { name: 'David', age: 20, grade: 'C' },
+// ];
+// const sumAge=students.reduce((sum,student)=>sum+student.age,0);
+// console.log(sumAge);
+
+//25
+// const nestedArray = [[1, 2], [3, 4], [5, 6]];
+// => flat this array using reduce
+// ---1st take---//
+// const nestedArray = [[1, 2], [3, 4], [5, 6]];
+// const flattenedArray = nestedArray.reduce((acc, current) => [...acc, ...current], []);
+// console.log(flattenedArray);
+
+
+// ---2nd take---//
+// const nestedArray = [[1, 2], [3, 4], [5, 6]];
+// const flattenedArray = nestedArray.reduce((acc, current) => acc.concat(current), []);
+// console.log(flattenedArray);
+
+
+//26
+// Create an array of squares of even numbers from a given array.
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// const evenSquares = numbers.filter(num => num % 2 === 0).map(num => num ** 2); 
+// console.log(evenSquares);
+
+// ---using reduce---//
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// const evenSquares = numbers.reduce((result, num) => {
+//   if (num % 2 === 0) {
+//     result.push(num ** 2);
+//   }
+//   return result;
+// }, []);
+// console.log(evenSquares);
+
+//27
+// const numbers = [1, 2, 2, 3, 4, 4, 5];
+
+// const repeat = numbers.filter((value, index, arr) => {
+//   return arr.indexOf(value) === index;
+// });
+// console.log(repeat);
+
+//28
+// ---1st take---//
+// const words = ['apple', 'banana', 'orange'];
+
+// const result = words.find(word => {
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === 'a') {
+//       return true;
+//     }
+//   }
+//   return false;
+// });
+// console.log(result);
+
+// // ---2nd take---//
+// const words = ['apple', 'banana', 'orange'];
+// const words=["bhkti","bhakti"]
+// const result = words.find(word => word.includes('a'));
+// console.log(result);
+
+//29
+// Find the index of the first odd number in an array.
+// const numbers = [2, 4, 6, 8, 9, 10];
+// const result = words.find(word => {
+//   for (let i = 0; i < word.length; i++) {
+//     if (numbers%2===0) {
+//       return true;
+//     }
+//   }
+//   return numbers.findIndex(numbers);
+// });
+// console.log(result);
+//it not work
+
+// const numbers = [2, 4, 6, 8,9, 10];
+// const oddIndex = numbers.findIndex(number => number % 2 !== 0);
+// console.log(oddIndex);
+
+// const numbers = [2, 4, 6, 8,10];
+// const oddIndex=numbers.reduce((value,index,array)=>{value=>numbers%2!==0;return array})
+// console.log(oddIndex);
+//in reduce when you not defind odd number than it not give undefined it give last number index
+
+//30
+// ------using recreusen----//
+// function factorial(n){
+//   if(n < 0){
+//       return "number is negitive please enter posstive number."
+//   }
+
+//   if(n == 0 || n == 1){
+//       return 1;
+//   }else{
+//       return n * factorial(n-1);
+//   }
+// }
+// let n = -5;
+// answer = factorial(n)
+// console.log("Factorial of " + n + " : " + answer);
+
+
+// ---using if else if------//
+// function factorial(n){
+//   let answer = 1;
+//   if (n == 0 || n == 1){
+//     return answer;
+//   }
+//   else if(n > 1){
+//     for(var i = n; i >= 1; i--){
+//       answer = answer * i;
+//     }
+//     return answer;
+//   }
+//   else{
+//     return "number has to be positive."
+//   }  
+// }
+// let n = 4;
+// answer = factorial(n)
+// console.log("Factorial of " + n + " : " + answer);
+
+//31
+// Find the index of the first person whose name starts with 'A' and age is less than 20.
+// -1st take-//
+// const people = [
+//   { name: 'Alice', age: 18 },
+//   { name: 'Bob', age: 20 },
+//   { name: 'Charlie', age: 19 },
+//   { name: 'David', age: 21 }
+// ];
+// for (let i = 0; i < people.length; i++) {
+//   const person = people[i];
+//   if (person.name.startsWith('A') && person.age < 20) {
+//     index = i;
+//     break; // Found the first matching person, exit the loop
+//   }
+// }
+// console.log(people);
+// ----2nd take-----//
+// const people = [
+ 
+//   { name: 'Bob', age: 20 },
+//   { name: 'Charlie', age: 19 },
+//   { name: 'Alice', age: 18 },
+//   { name: 'David', age: 21 }
+// ];
+// function findIndex(arr) {
+//   let res = arr.reduce((a,b,c)=>{
+//       if (b.name.charAt(0) === "A" && b.age <= 20) {
+//           return c;
+//       }
+//       return a;
+//   },"")
+//   return res;
+// }  
+// console.log(findIndex(people));
+// ----3rd take-------//
+// const people = [
+//   { name: 'Alice', age: 18 },
+//   { name: 'Bob', age: 20 },
+//   { name: 'Charlie', age: 19 },
+//   { name: 'David', age: 21 }
+// ];
+
+// const index = people.findIndex(person => person.name.startsWith('A') && person.age <20);
+// console.log(index);
+
+
+
 
 
 
