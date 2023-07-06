@@ -1,21 +1,21 @@
 //1
 
-// const names = [
-//   { first_name: "Handnm", last_name: "L demo" },
-//   { first_name: "Q Wei", last_name: "Alxezx" },
-//   { first_name: "Pqwern", last_name: "Ruse" },
-//   { first_name: "Wiruyn", last_name: "Ruby" },
-//   { first_name: "Erpso", last_name: "Loal" },
-//   { first_name: "Demors", last_name: "Poet" },
-//   { first_name: "Aleos", last_name: "Lkeu" },
-// ];
+const names = [
+  { first_name: "Handnm", last_name: "L demo" },
+  { first_name: "Q Wei", last_name: "Alxezx" },
+  { first_name: "Pqwern", last_name: "Ruse" },
+  { first_name: "Wiruyn", last_name: "Ruby" },
+  { first_name: "Erpso", last_name: "Loal" },
+  { first_name: "Demors", last_name: "Poet" },
+  { first_name: "Aleos", last_name: "Lkeu" },
+];
 
-// const updatedNames = names.map((name) => {
-// //   return { ...name, full_name: name.first_name + " " + name.last_name };
-//   return { ...name, age:name.city="rajkot" };
-// });
+const updatedNames = names.map((name) => {
+ return { ...name, full_name: name.first_name + " " + name.last_name };
+  return { ...name, age:name.city="rajkot" };
+});
 
-// console.log(updatedNames);
+console.log(updatedNames);
 
 
 // 2
