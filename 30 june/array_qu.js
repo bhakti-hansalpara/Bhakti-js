@@ -12,7 +12,7 @@ const names = [
 
 const updatedNames = names.map((name) => {
  return { ...name, full_name: name.first_name + " " + name.last_name };
-  return { ...name, age:name.city="rajkot" };
+  return { ...name, age:name.city="rajkot" };0
 });
 
 console.log(updatedNames);
@@ -974,6 +974,147 @@ console.log(updatedNames);
 
 // const index = people.findIndex(person => person.name.startsWith('A') && person.age <20);
 // console.log(index);
+
+
+// //32
+// function containsSubarray(arrayOfArray, array) {
+//   return arrayOfArray.some((subarray) => {
+//     if (subarray.length !== array.length) {
+//       return false;
+//     }
+//     return subarray.every((value, index) => value === array[index]);
+//   });
+// }
+
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [1, 2])); // Output: true
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [2, 1])); // Output: true
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [22, 15])); // Output: false
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [22, 90, 15], [88, 90]], [22, 15, 90])); // Output: true
+
+
+// //33
+// function containsSubarray(arrayOfArray, array) {
+//   return arrayOfArray.some((subarray) => {
+//     return subarray.length === array.length && subarray.every((value, index) => value === array[index]);
+//   });
+// }
+
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [1, 2])); // Output: true
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [2, 1])); // Output: false
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [22, 15])); // Output: false
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [22, 90, 15], [88, 90]], [22, 15, 90])); // Output: false
+
+
+//34
+// function union(arr1, arr2) {
+//   const mergedArray = [arr1, arr2].flat();
+//   const unionArray = [...new set(mergedArray)];
+//   return unionArray;
+// }
+
+// console.log(union([1, 2, 3], [100, 2, 1, 10]));
+// Output: [1, 2, 3, 10, 100]//it is not work
+
+// function union(arr1, arr2) {
+//   const mergedArray = arr1.concat(arr2).flat();
+//   const unionArray = mergedArray.filter((value, index, array) => array.indexOf(value) === index);
+//   return unionArray;
+// }
+
+// console.log(union([1, 2, 3], [100, 2, 1, 10]));
+// Output: [1, 2, 3, 10, 100]
+
+
+// //35
+// function difference(arr1, arr2) {
+//   const diffArray = arr1.filter((value) => !arr2.includes(value));
+//   const diffArray2 = arr2.filter((value) => !arr1.includes(value));
+//   return diffArray.map((value) => value.toString());
+// }
+
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+// Output: ["3", "10", "100"]//=>not work give only 3
+
+// function difference(arr1, arr2) {
+//   const diffArr1 = arr1.filter(item => !arr2.includes(item));
+//   const diffArr2 = arr2.filter(item => !arr1.includes(item));
+//   let arr3= diffArr1.concat(diffArr2);
+//   return arr3;
+// }
+
+// // Testing the function
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+// console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]))
+
+
+// //2nd
+// function difference(arr1, arr2) {
+//   const flattenedArr1 = arr1.flat(Infinity);
+//   const flattenedArr2 = arr2.flat(Infinity);
+
+//   const diffArray = flattenedArr1.filter((value) => !flattenedArr2.includes(value));
+//   let arr3=flattenedArr1.concat(flattenedArr2);
+//   return arr3;
+// }
+
+// console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
+
+
+
+// Output: ["3", "10", "100"]
+
+
+//37
+// const array = [NaN, 0, 15, false, -22, '', undefined, 47, null];
+// const result = array.filter(Number);
+// console.log(result);
+// Output: [15, -22, 47]
+
+//38
+function remove_arr(arr, element) {
+  return arr.filter(item => item !== element);
+}
+
+console.log(remove_arr([2, 5, 9, 6],6, 5));
+Output: [2, 9, 6]
+
+//39
+// function contains(arr, element) {
+//   return arr.includes(element);
+// }
+
+// const arr = [2, 5, 9, 6];
+// console.log(contains(arr, 5));
+// // Output: true
+
+// console.log(contains(arr, 10));
+// Output: false
+
+//41
+// Write a JavaScript program to count the number of arrays inside a given array.
+// Test Data :
+// ([2,8,[6],3,3,5,3,4,[5,4]]) -> 2
+// ([2,8,[6,3,3],[4],5,[3,4,[5,4]]]) -> 3
+
+const countArrays = (arr) => arr.filter(Array.isArray).length;
+
+console.log(countArrays([2, 8, [6], 3, 3, 5, 3, 4, [5, 4]]));
+// Output: 2
+
+console.log(countArrays([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]]));
+Output: 3
+
+//42
+// Write a JavaScript program to find the maximum length of arrays inside a given array.
+// Test Data :
+// [2,8,[6],3,3,5,3,4,[5,4]] -> 2
+// [2,8,[6,3,3],[4],5,[3,4,[5,4]]] -> 3
+// [2,8,[6,3,3],[4],5,[3,4,[5,4]], [23,56]] -> 4
+// [1,5,2,6,4,23,89] -> 0
+// const countArrays = (arr) => arr.filter(Array.isArray).length;
+// return countArrays>Array.length ((countArrays)[2,8,[6],3,3,5,3,4,[5,4]]);;
+
+
 
 
 
