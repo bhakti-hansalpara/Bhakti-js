@@ -282,3 +282,4 @@
 // console.log(num);//=>-2.3e+3
 
 
+// ---toLocalString----//
