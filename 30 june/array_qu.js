@@ -1,21 +1,23 @@
-//1
+console.log("hello" || 0);
 
-const names = [
-  { first_name: "Handnm", last_name: "L demo" },
-  { first_name: "Q Wei", last_name: "Alxezx" },
-  { first_name: "Pqwern", last_name: "Ruse" },
-  { first_name: "Wiruyn", last_name: "Ruby" },
-  { first_name: "Erpso", last_name: "Loal" },
-  { first_name: "Demors", last_name: "Poet" },
-  { first_name: "Aleos", last_name: "Lkeu" },
-];
+// //1
 
-const updatedNames = names.map((name) => {
- return { ...name, full_name: name.first_name + " " + name.last_name };
-  return { ...name, age:name.city="rajkot" };0
-});
+// const names = [
+//   { first_name: "Handnm", last_name: "L demo" },
+//   { first_name: "Q Wei", last_name: "Alxezx" },
+//   { first_name: "Pqwern", last_name: "Ruse" },
+//   { first_name: "Wiruyn", last_name: "Ruby" },
+//   { first_name: "Erpso", last_name: "Loal" },
+//   { first_name: "Demors", last_name: "Poet" },
+//   { first_name: "Aleos", last_name: "Lkeu" },
+// ];
 
-console.log(updatedNames);
+// const updatedNames = names.map((name) => {
+//  return { ...name, full_name: name.first_name + " " + name.last_name };
+//   return { ...name, age:name.city="rajkot" };0
+// });
+
+// console.log(updatedNames);
 
 
 // 2
@@ -30,16 +32,29 @@ console.log(updatedNames);
 //   ];
   
 //   const updatedUsers = users.map((user) => {
-//     return{...user, isMature:"rajkot"}
+//     const isMature=user.age>=18;
+//     return{...user, isMature}
 //   });
   
 //   console.log(updatedUsers);
 
-// 3
+// // 3
 // let arr = [1,2,3,5]
-// console.log(arr[-1]);
+// console.log(arr[-1]);//==> undefined beacuse array has not -1 index
 
 // 4
+
+const nestedArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+nestedArray.forEach(subArray => {
+  subArray.forEach(item => {
+    console.log(item);
+  });
+});
 // const nestedArray = [
 //     [1, 2, 3],[]
 //     [4, 5, 6],
@@ -96,32 +111,33 @@ console.log(updatedNames);
 //   //it is not work
 
 // //using  for in loop and if loop
-// const nestedObject = {
-//     name: "Vishal Kukreja",
-//     age: 32,
-//     address: {
-//       street: "123 Mumbai fashion St",
-//       city: "Midtown",
-//       state: "MH",
-//     },
-//     hobbies: ["reading", "drawing", "gardening"],
-//   };
+const nestedObject = {
+    name: "Vishal Kukreja",
+    age: 32,
+    addr:"alay",
+    address: {
+      street: "123 Mumbai fashion St",
+      city: "Midtown",
+      state: "MH",
+},
+    hobbies: ["reading", "drawing", "gardening"],
+  };
   
-//   function printItems(obj) {
-//     let result = "";
+  function printItems(obj) {
+    let result = "";
     
-//     for (let key in obj) {
-//       if (typeof obj[key] === "object" && !Array.isArray(obj[key])) { //(!Array.isArray(obj[key])==>when it array then give true other it gives false
-//         result += printItems(obj[key]);
-//       } else {
-//         result += obj[key] + "\n";
-//       }
-//     }
+    for (let key in obj) {
+      if (typeof obj[key] === "object") { //(!Array.isArray(obj[key])==>when it array then give true other it gives false
+        result += printItems(obj[key]);
+      } else {
+        result += obj[key] + "\n";
+      }
+    }
   
-//     return result;
-//   }
+    return result;
+  }
   
-//   console.log(printItems(nestedObject));
+  console.log(printItems(nestedObject));
   
 // //foreach loop
 // const nestedObject = {
@@ -157,11 +173,11 @@ console.log(updatedNames);
 //   return false;
 // }
 
-// //   // Test cases
-// //   console.log(containsNumbers([1, 2, 3]));            // true
-// //   console.log(containsNumbers(["1", "a", "h"]));      // false
-// //   console.log(containsNumbers(["a", 3, "gh"]));       // true
-// //   console.log(containsNumbers(["a", '3df', "gh"]));   // false
+//   // Test cases
+//   console.log(containsNumbers([1, 2, 3]));            // true
+//   console.log(containsNumbers(["1", "a", "h"]));      // false
+//   console.log(containsNumbers(["a", 3, "gh"]));       // true
+//   console.log(containsNumbers(["a", 'df', "gh"]));   // false
 
 
 // //arrow function
@@ -181,6 +197,9 @@ console.log(updatedNames);
 // const convertedNumbers = numbers.map((num) => String(num));
 
 // console.log(convertedNumbers); // ["1", "2", "3", "4"]
+// const numbers=[1,2,3,4,5];
+// const convertedNumbers=numbers.map(num=>num.toString());
+// console.log(convertedNumbers);//['1','2','3','4','5']
 
 // 8
 // const numbers = [1, 2, 3, 4];
@@ -413,7 +432,7 @@ console.log(updatedNames);
 // let output = shortenWords(input);
 // console.log(output); // Output: "E3y d7r l3s to mix k8s and j8t"
 
-// ----Q-12----//
+// ----Q-13----//
 
 // const products = [
 //     { name: "Product 1", price: 20, category: "Electronics" },
@@ -1046,22 +1065,93 @@ console.log(updatedNames);
 // console.log(difference([1, 2, 3], [100, 2, 1, 10]));
 // console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]))
 
+// ->
+function difference1(arr1, arr2) {
+    // Flatten the arrays to a single level
+    const flattenedArr1 = arr1.flat(Infinity)
+
+    const flattenedArr2 = arr2.flat(Infinity)
+
+
+    // Find the elements that are present in arr2 but not in arr1
+    const difference = flattenedArr2.filter((elem) => !flattenedArr1.includes(elem));
+
+    return difference;
+  }
+  console.log(difference1([1, 2, 3], [100, 2, 1, 10]));
+  console.log(difference1([1, 2, 3, 4, 5], [1, [2], [3, [[4]]], [5, 6]]));
+  // Output: ["6"]
+function difference(arr1, arr2) {
+  const diffArray = arr1.filter(item => !arr2.includes(item));
+  return diffArray.map(item => item.toString());
+}
+
+console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+
+
 
 // //2nd
-// function difference(arr1, arr2) {
-//   const flattenedArr1 = arr1.flat(Infinity);
-//   const flattenedArr2 = arr2.flat(Infinity);
+function difference(arr1, arr2) {
+  const flattenedArr1 = arr1.flat(Infinity);
+  const flattenedArr2 = arr2.flat(Infinity);
 
-//   const diffArray = flattenedArr1.filter((value) => !flattenedArr2.includes(value));
-//   let arr3=flattenedArr1.concat(flattenedArr2);
-//   return arr3;
-// }
+  const diffArray = flattenedArr1.filter((value) => !flattenedArr2.includes(value));
+  let arr3=flattenedArr1.concat(flattenedArr2);
+  return arr3;
+}
 
-// console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
+console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
 
 
 
 // Output: ["3", "10", "100"]
+
+//36
+// function findPair(numbers, target) {
+//   const pair = [];
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     for (let j = i + 1; j < numbers.length; j++) {
+//       if (numbers[i] + numbers[j] === target) {
+//         pair.push(numbers[i], numbers[j]);
+//         break;
+//       }
+//     }
+//     if (pair.length) {
+//       // break;
+//       continue;
+//     }
+//   }
+
+//   return pair;
+// }
+
+// const numbers = [10, 20, 10, 40, 50, 60, 70];
+// const target = 50;
+
+// const result = findPair(numbers, target);
+// console.log(result);
+
+
+// function findPair(numbers, target) {
+//   const pair = [];
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     for (let j = i + 1; j < numbers.length - 1; j++) {
+//       if (numbers[i] + numbers[j] === target) {
+//         return [numbers[i], numbers[j]];
+//       }
+//     }
+//   }
+
+//   return null;
+// }
+
+// const numbers = [10, 20, 10, 40, 50, 60, 70];
+// const target = 50;
+
+// const result = findPair(numbers, target);
+// console.log(result);
 
 
 //37
@@ -1071,12 +1161,50 @@ console.log(updatedNames);
 // Output: [15, -22, 47]
 
 //38
-function remove_arr(arr, element) {
+function num_string_range(start, end, step) {
+  const range = [];
+  const startCode = start.charCodeAt(0);
+  const endCode = end.charCodeAt(0);
+
+  for (let i = startCode; i <= endCode; i += step) {
+    range.push(String.fromCharCode(i));
+  }
+
+  return range;
+}
+
+console.log(num_string_range('a', 'z', 2));
+console.log(num_string_range('A','Z',2));
+console.log(num_string_range(0,-5,1));//==>it not work in same code
+
+function num_string_range(start, end, step) {
+  const range = [];
+  const isAscending = start <= end;
+
+  if (isAscending) {
+    for (let i = start; i <= end; i += step) {
+      range.push(i);
+    }
+  } else {
+    for (let i = start; i >= end; i -= step) {
+      range.push(i);
+    }
+  }
+
+  return range;
+}
+
+console.log(num_string_range(0, -5, 1));    // [0, -1, -2, -3, -4, -5]
+console.log(num_string_range(0, 25, 5));    // [0, 5, 10, 15, 20, 25]
+console.log(num_string_range(20, 5, 5));    // [20, 15, 10, 5]
+
+//39
+function remove_array_element(arr, element) {
   return arr.filter(item => item !== element);
 }
 
-console.log(remove_arr([2, 5, 9, 6],6, 5));
-Output: [2, 9, 6]
+console.log(remove_array_element([2, 5, 9, 6], 5));
+
 
 //39
 // function contains(arr, element) {
@@ -1090,29 +1218,57 @@ Output: [2, 9, 6]
 // console.log(contains(arr, 10));
 // Output: false
 
-//41
-// Write a JavaScript program to count the number of arrays inside a given array.
-// Test Data :
-// ([2,8,[6],3,3,5,3,4,[5,4]]) -> 2
-// ([2,8,[6,3,3],[4],5,[3,4,[5,4]]]) -> 3
 
-const countArrays = (arr) => arr.filter(Array.isArray).length;
+//40
+function countArrays(arr) {
+  let count = 0;
 
-console.log(countArrays([2, 8, [6], 3, 3, 5, 3, 4, [5, 4]]));
-// Output: 2
+  function checkArray(element) {
+    if (Array.isArray(element)) {
+      count++;
+      element.find(checkArray);
+    }
+  }
 
-console.log(countArrays([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]]));
-Output: 3
+  arr.find(checkArray);
+  return count;
+}
 
-//42
-// Write a JavaScript program to find the maximum length of arrays inside a given array.
-// Test Data :
-// [2,8,[6],3,3,5,3,4,[5,4]] -> 2
-// [2,8,[6,3,3],[4],5,[3,4,[5,4]]] -> 3
-// [2,8,[6,3,3],[4],5,[3,4,[5,4]], [23,56]] -> 4
-// [1,5,2,6,4,23,89] -> 0
-// const countArrays = (arr) => arr.filter(Array.isArray).length;
-// return countArrays>Array.length ((countArrays)[2,8,[6],3,3,5,3,4,[5,4]]);;
+console.log(countArrays([2, 8, [6], 3, 3, 5, 3, 4, [5, 4]])); // 2
+console.log(countArrays([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]])); // 3 //==>it is not work in nested array it give 4
+console.log(countArrays([2,8,[6],3,3,5,3,4,[5,4]]));
+console.log(countArrays([2,8,[6,3,3],[4],5,[3,4,[5,4]]]  ));
+console.log(countArrays([2,8,[6,3,3],[4],5,[3,4,[5,4]], [23,56]]));
+console.log(countArrays([1,5,2,6,4,23,89]));
+
+
+function countArrays(arr) {
+  const count = arr.filter(item => Array.isArray(item)).length;//==>what is length in this what is use it
+  return count;
+}
+
+console.log(countArrays([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]])); // 3
+
+//43
+function isFactorChain(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] % arr[i - 1] !== 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isFactorChain([2, 4, 8, 16, 32]));  // true
+console.log(isFactorChain([2, 4, 16, 32, 68])); // false
+console.log(isFactorChain([2, 4, 16, 32, 64])); // true
+
+let obj1 = { a: 23, b: 45 };
+let arr1 = [{ ...obj1 }];
+let arr2 = Object.assign([], arr1);
+arr2[0].c = 5;
+console.log(arr1); 
+
 
 
 

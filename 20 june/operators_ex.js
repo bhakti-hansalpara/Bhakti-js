@@ -236,7 +236,7 @@ console.log( "10" % "3" );//1 //Module(%) is used to return reminder string
 console.log(("2.5") + 1.8);//2.51. //plus operator is used to concat two string if value are string
 
 57
-console.log( 4 - Number("2.5"));//ans=1.//Number is used to change string into number
+console.log( 4 - Number("2.5"));//ans=1.5//Number is used to change string into number
 
 58
 console.log(1.5 * Number("3.2"));//ans=4.800000000000001 //string into number-multiply
@@ -254,7 +254,7 @@ console.log(10 - Number("2.5"));//7.5
 console.log(3.5 * Number("2"));//ans=7
 
 63
-console.log(8 / Number("2.5")); //string into number-divide
+console.log(8 / Number("2.5")); //string into number-divide//=>3.2
 
 64
 console.log( String(1.2) + "0.5");//concat
@@ -405,3 +405,43 @@ console.log(largest);
 
 //same which 2nd number is great than 1st and 3rd than print it both condision is ture than print 2nd satatement
 //if both acondidtion are false than 3rd is print.
+
+let a = 10;
+a=a+5;
+a+=5;
+a-=5;
+a*=5;
+a/=5;
+a%=5;
+console.log(a);
+
+
+let a = 5 + 5 * 3 + 'abc' ;
+console.log(a, typeof a);
+
+let a = 10;
+let b = "10";
+console.log(a == b, a === b)
+console.log(a != b, a !== b)
+
+let a = 5;
+let b = (a++)**2;
+console.log(a, b);
+
+const numbers = [3, 2, 4, 1, 5];
+// [...numbers] creates a shallow copy, so reverse() does not mutate the original
+const reverted = [...numbers].reverse();
+reverted[0] = 5;
+console.log(numbers[0]); // 3
+console.log(numbers);
+
+function isBiggerThan10(element, index, array) {
+    return element > 10;
+  }
+  
+  [2, 5, 8, 1, 4].some(isBiggerThan10); // false
+  [12, 15, 8, 1, 4].some(isBiggerThan10); // true
+  console.log(isBiggerThan10());
+
+
+
