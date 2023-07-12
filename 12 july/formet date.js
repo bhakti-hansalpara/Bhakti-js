@@ -65,28 +65,28 @@
 
 
 
-function transform(formatDate) {
-    var date = new Date();
+// function transform(formatDate) {
+//     var date = new Date();
     
-    switch (format) {
-      case 'yyyy-mm-dd':
-        return formatDate(date, 'yyyy-mm-dd');
-      case 'dd-mm-yyyy':
-        return formatDate(date, 'dd-mm-yyyy');
-      case 'yyyy:mm:dd':
-        return formatDate(date, 'yyyy:mm:dd');
-      case 'yyyy-dd-mm':
-        return formatDate(date, 'yyyy-dd-mm');
-      default:
-        return 'Invalid format';
-    }
-  }
+//     switch (format) {
+//       case 'yyyy-mm-dd':
+//         return formatDate(date, 'yyyy-mm-dd');
+//       case 'dd-mm-yyyy':
+//         return formatDate(date, 'dd-mm-yyyy');
+//       case 'yyyy:mm:dd':
+//         return formatDate(date, 'yyyy:mm:dd');
+//       case 'yyyy-dd-mm':
+//         return formatDate(date, 'yyyy-dd-mm');
+//       default:
+//         return 'Invalid format';
+//     }
+//   }
   
-  console.log(transform('yyyy-mm-dd')); // Output: "2022-01-01"
-  console.log(transform('dd-mm-yyyy')); // Output: "01-01-2022"
-  console.log(transform('yyyy:mm:dd')); // Output: "2022:01:01"
-  console.log(transform('yyyy-dd-mm')); // Output: "2022-01-01"
-  console.log(transform('invalid-format')); 
+//   console.log(transform('yyyy-mm-dd')); // Output: "2022-01-01"
+//   console.log(transform('dd-mm-yyyy')); // Output: "01-01-2022"
+//   console.log(transform('yyyy:mm:dd')); // Output: "2022:01:01"
+//   console.log(transform('yyyy-dd-mm')); // Output: "2022-01-01"
+//   console.log(transform('invalid-format')); 
 
 
 
@@ -115,25 +115,160 @@ function transform(formatDate) {
 //   console.log(transform('yyyy-dd-mm')); // Output: "2022-01-01"
 //   console.log(transform('invalid-format'));
 
-function format(transform) {
-    var date = new Date();
+// function format(transform) {
+//     var date = new Date();
     
-    var options = {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric'
-    };
-    var op2={day:'2-digit', month:'2-digit',year:'numeric'};
+//     var options = {
+//       day: '2-digit',
+//       month: '2-digit',
+//       year: 'numeric'
+//     };
+//     var op2={day:'2-digit', month:'2-digit',year:'numeric'};
   
-    return date.toLocaleDateString(undefined, options);
-  }
+//     return date.toLocaleDateString(undefined, options);
+//   }
   
-  console.log(format('dd-mm-yyyy')); 
+//   console.log(format('dd-mm-yyyy')); 
 
   //----add 2days to current date//
-  var date = new Date("1/2/2023"); // Create a Date object with the initial date
+//   var date = new Date("31/1/2023"); // Create a Date object with the initial date
 
-// Add two days
-date.setDate(date.getDate() + 2);
+// // Add two days
+// date.setDate(date.getDate() + 2);
 
-console.log(date.toLocaleDateString()); // Output: "3/2/2023"
+// console.log(date.toString()); // Output: "3/2/2023"
+
+// function calculateAge(birthdate) {
+//     var today = new Date();
+//     var birthdate = new Date(birthdate);
+//     var age = today.getFullYear() - birthdate.getFullYear();
+  
+//     var monthDiff = today.getMonth() - birthdate.getMonth();
+//     var dayDiff = today.getDate() - birthdate.getDate();
+  
+//     switch (true) {
+//       case monthDiff < 0:
+//         age--;
+//         break;
+//       case monthDiff === 0 && dayDiff < 0:
+//         age--;
+//         break;
+//       default:
+//         break;
+//     }
+  
+//     return age;
+//   }
+  
+//   // Example usage
+//   var myAge = calculateAge("1990-05-15");
+//   console.log(myAge);
+
+//   function calculateAge(birthdate) {
+//     var today = new Date();
+//     var birthdate = new Date(birthdate);
+//     var age = today.getFullYear() - birthdate.getFullYear();
+//     var monthDiff = today.getMonth() - birthdate.getMonth();
+    
+//     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthdate.getDate())) {
+//       age--;
+//     }
+    
+//     return age;
+//   }
+  
+//   // Example usage
+//   var myAge = calculateAge("1990-05-15");
+//   console.log(myAge);
+
+// const d1 = new Date('2020-01-01')
+// const d2 = new Date('2020-01-01T00:00')
+// console.log(d1.getFullYear(), d2.getFullYear())
+
+// var date = new Date("2021-10-20");
+// var formattedDate = date.toLocaleDateString();
+// console.log(formattedDate);
+
+// octbor 2 2023 
+// output 10/02/2023
+// var date = new Date("Octbor-2-2023");
+// var formattedDate = date.toLocaleDateString();
+// console.log(formattedDate);
+
+// var time = new Date("2021-10-20T14:30:00");
+// var formattedTime = time.toLocaleTimeString("en-US");
+// console.log(formattedTime);
+
+// var time = new Date("10/2/2023:12:20:29");
+// var formattedTime = time.toLocaleTimeString("en-US");
+// console.log(formattedTime);
+
+// var date = new Date("2021-10-20");
+// var dayOfWeek = date.toLocaleDateString("en-US", { weekday: 'long' });
+// console.log(dayOfWeek);
+
+// Create a new Date object
+// var currentDate = new Date();
+// var utcDate = currentDate.getUTCDate();
+// console.log("UTC Date: " + utcDate);
+
+// --------compare 2 dates how many days between that date--------//
+// var date_diff_indays = function(date1, date2) {
+//     var dt1 = new Date(date1);
+//      var dt2 = new Date(date2);
+//      var dt3=dt1.getTime();
+//      var dt4=dt2.getTime();
+//      var dt10=dt3-dt4;
+//      var dt20=dt10/(24*3600*1000);
+//      return dt20;
+//     //  return dt4-dt3;
+//     // return (dt4-dt3)*30;
+    
+//     // return Math.floor((Date(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+//     }
+//     console.log(date_diff_indays('2023/8/17', '2023/7/12'));//=>5
+//     console.log(date_diff_indays('12/02/2020', '11/04/2018')); //====>it is not run 
+
+//     let date1=new Date("2020-10-20")
+//     let date2 =new Date("2020-10-04");
+//     let diff=date2.getTime()-date1.getTime();
+//     let diffDays=diff/(1000*3600*24);
+//    console.log( Math.abs(diffDays));//=>16
+//     console.log(diffDays);    //=>-16
+
+
+
+// Write a JavaScript function to get time differences in months between two dates.
+// function diff_months(dt2, dt1) 
+// {
+
+//  var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+//   diff /= (60 * 60 * 24 * 7 * 4);
+//  return Math.abs(Math.round(diff));
+ 
+// }
+
+// dt1 = new Date(2014,10,2);
+// dt2 = new Date(2014,10,11);
+// console.log(diff_months(dt1, dt2));
+
+// dt1 = new Date("June 13, 2014 08:11:00");
+// dt2 = new Date("October 19, 2014 11:13:00");
+// console.log(diff_months(dt1, dt2));
+// var date_diff_inMonth = function(date1, date2) {
+//     var dt1 = new Date(date1);
+//      var dt2 = new Date(date2);
+//      var dt3=dt1.getTime();
+//      var dt3=dt1.getTime();
+//      var dt4=dt2.getTime();
+//      var dt10=(dt3-dt4)*30;
+//     //  var dt10=(dt3-dt4)/24*3600*1000;
+  
+//      return dt10;
+//     //  return dt4-dt3;
+//     // return (dt4-dt3)*30;
+    
+//     // return Math.floor((Date(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+//     }
+//     console.log(date_diff_inMonth('2023/8/17', '2023/7/12'));//=>5
+//     console.log(date_diff_inMonth('12/02/2020', '11/04/2018')); 
