@@ -272,3 +272,79 @@
 //     }
 //     console.log(date_diff_inMonth('2023/8/17', '2023/7/12'));//=>5
 //     console.log(date_diff_inMonth('12/02/2020', '11/04/2018')); 
+
+// function dateModifier(year, month, date, hour, minute, second) {
+//     let OGDate = new Date();
+//     let mdfYear, mdfMonth, mdfDate, mdfHour, mdfMinute, mdfSecond;
+//     mdfYear = OGDate.getFullYear() + year; 
+  
+//     mdfMonth = OGDate.getMonth() + month; 
+   
+//     mdfDate = OGDate.getDate() + date; 
+   
+//     mdfHour = OGDate.getHours() + hour; 
+  
+//     mdfMinute = OGDate.getMinutes() + minute; 
+
+//     mdfSecond = OGDate.getSeconds() + second; 
+
+//     return `Year : ${mdfYear}, Month :  ${mdfMonth}, Date :  ${mdfDate}, Hour :  ${mdfHour}, Minute :  ${mdfMinute}, Second : ${mdfSecond}`
+// }
+// // console.log(dateModifier(7 , 3, 4,5,2,50));
+// console.log(dateModifier(6,1,22,23,36,36));
+//it is not perfect bcz of give date 35,above 31 and minte and seconds also above seconds remove that add some condition
+
+// function dateModifier(year, month, date, hour, minute, second) {
+//     let OGDate = new Date();
+//     let mdfYear, mdfMonth, mdfDate, mdfHour, mdfMinute, mdfSecond;
+  
+//     mdfYear = OGDate.getFullYear() + year;
+  
+//     // Adjust month
+//     mdfMonth = (OGDate.getMonth() + month) % 12;
+  
+//     // Adjust date (valid range: 1 to 31)
+//     mdfDate = OGDate.getDate() + date;
+//     if (mdfDate > 31) {
+//       mdfMonth++; // Move to the next month
+//       mdfDate = mdfDate % 31; // Wrap around to the next month's valid range
+//     }
+  
+//     mdfHour = (OGDate.getHours() + hour) % 24;
+  
+//     mdfMinute = (OGDate.getMinutes() + minute) % 60;
+
+//     mdfSecond = (OGDate.getSeconds() + second) % 60;
+  
+//     return `Year: ${mdfYear}, Month: ${mdfMonth}, Date: ${mdfDate}, Hour: ${mdfHour}, Minute: ${mdfMinute}, Second: ${mdfSecond}`;
+//   }
+  
+//   console.log(dateModifier(1,1,20,56,8,7));
+  
+// ---toJSON----//
+//when you passed wrong formet of date then it giveNaN not give any error
+// const jsonDate = new Date(0).toJSON(); // '1970-01-01T00:00:00.000Z'
+// const backToDate = new Date(jsonDate);
+
+// console.log(jsonDate); // 1970-01-01T00:00:00.000Z
+
+// const jesondate=new Date();
+// const backdate=jesondate.toJSON();
+// console.log(jesondate);//2023-07-13T05:05:27.049Z
+// console.log(backdate);//2023-07-13T05:05:27.049Z
+
+const currentDate = new Date();
+console.log(currentDate);
+const jsonString = JSON.stringify({ date: currentDate });
+
+console.log(jsonString);
+
+
+// --toISOtring--//
+//it convert ISO 8601 format form
+//when you right wrong date formet it give error in case of JSON it give NaN not give any eror in JSON
+// const event = new Date('13 july 2023');
+// console.log(event.toString());
+// // console.log(event.toLocalstring());
+// console.log(event.toISOString());// "2011-10-05T14:48:00.000Z"
+
