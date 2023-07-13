@@ -1,3 +1,27 @@
+// -final-//
+// function formatDate(date, format) {
+//     const year = date.getFullYear();
+//     const month = String(date.getMonth() + 1).padStart(2, '0');
+//     const day = String(date.getDate()).padStart(2, '0');
+  
+//     switch (format) {
+//       case 'yyyy:mm:dd':
+//         return `${year}:${month}:${day}`;
+//       case 'dd/yyyy/mm':
+//         return `${day}/${year}/${month}`;
+//         case 'yyyy-mm-dd':
+//             return `${year}-${month}-${day}`;
+//       default:
+//         return 'Invalid format';
+//     }
+//   }
+  
+//   const currentDate = new Date();
+//   console.log(formatDate(currentDate, 'yyyy:mm:dd'));
+//   console.log(formatDate(currentDate, 'dd/yyyy/mm'));
+//   console.log(formatDate(currentDate, 'yyyy-mm-dd'));
+
+  
 // let objectDate = new Date();
 
 
@@ -123,12 +147,14 @@
 //       month: '2-digit',
 //       year: 'numeric'
 //     };
-//     var op2={day:'2-digit', month:'2-digit',year:'numeric'};
+//     // var op2={day:'2-digit', month:'2-digit',year:'numeric'};
+//     var op2={year:'numeric',day:'2-digit',month:'2-digit'};
   
 //     return date.toLocaleDateString(undefined, options);
 //   }
   
-//   console.log(format('dd-mm-yyyy')); 
+// //   console.log(format('dd-mm-yyyy')); 
+//   console.log(format('yyyy-mm-dd'));
 
   //----add 2days to current date//
 //   var date = new Date("31/1/2023"); // Create a Date object with the initial date
@@ -333,11 +359,11 @@
 // console.log(jesondate);//2023-07-13T05:05:27.049Z
 // console.log(backdate);//2023-07-13T05:05:27.049Z
 
-const currentDate = new Date();
-console.log(currentDate);
-const jsonString = JSON.stringify({ date: currentDate });
+// const currentDate = new Date();
+// console.log(currentDate);
+// const jsonString = JSON.stringify({ date: currentDate });
 
-console.log(jsonString);
+// console.log(jsonString);
 
 
 // --toISOtring--//

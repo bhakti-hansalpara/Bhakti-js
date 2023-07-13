@@ -1,4 +1,3 @@
-console.log("hello" || 0);
 
 // //1
 
@@ -1066,41 +1065,41 @@ const nestedObject = {
 // console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]))
 
 // ->
-function difference1(arr1, arr2) {
-    // Flatten the arrays to a single level
-    const flattenedArr1 = arr1.flat(Infinity)
+// function difference1(arr1, arr2) {
+//     // Flatten the arrays to a single level
+//     const flattenedArr1 = arr1.flat(Infinity)
 
-    const flattenedArr2 = arr2.flat(Infinity)
+//     const flattenedArr2 = arr2.flat(Infinity)
 
 
-    // Find the elements that are present in arr2 but not in arr1
-    const difference = flattenedArr2.filter((elem) => !flattenedArr1.includes(elem));
+//     // Find the elements that are present in arr2 but not in arr1
+//     const difference = flattenedArr2.filter((elem) => !flattenedArr1.includes(elem));
 
-    return difference;
-  }
-  console.log(difference1([1, 2, 3], [100, 2, 1, 10]));
-  console.log(difference1([1, 2, 3, 4, 5], [1, [2], [3, [[4]]], [5, 6]]));
-  // Output: ["6"]
-function difference(arr1, arr2) {
-  const diffArray = arr1.filter(item => !arr2.includes(item));
-  return diffArray.map(item => item.toString());
-}
+//     return difference;
+//   }
+//   console.log(difference1([1, 2, 3], [100, 2, 1, 10]));
+//   console.log(difference1([1, 2, 3, 4, 5], [1, [2], [3, [[4]]], [5, 6]]));
+//   // Output: ["6"]
+// function difference(arr1, arr2) {
+//   const diffArray = arr1.filter(item => !arr2.includes(item));
+//   return diffArray.map(item => item.toString());
+// }
 
-console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
 
 
 
 // //2nd
-function difference(arr1, arr2) {
-  const flattenedArr1 = arr1.flat(Infinity);
-  const flattenedArr2 = arr2.flat(Infinity);
+// function difference(arr1, arr2) {
+//   const flattenedArr1 = arr1.flat(Infinity);
+//   const flattenedArr2 = arr2.flat(Infinity);
 
-  const diffArray = flattenedArr1.filter((value) => !flattenedArr2.includes(value));
-  let arr3=flattenedArr1.concat(flattenedArr2);
-  return arr3;
-}
+//   const diffArray = flattenedArr1.filter((value) => !flattenedArr2.includes(value));
+//   let arr3=flattenedArr1.concat(flattenedArr2);
+//   return arr3;
+// }
 
-console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
+// console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
 
 
 
@@ -1161,49 +1160,49 @@ console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
 // Output: [15, -22, 47]
 
 //38
-function num_string_range(start, end, step) {
-  const range = [];
-  const startCode = start.charCodeAt(0);
-  const endCode = end.charCodeAt(0);
+// function num_string_range(start, end, step) {
+//   const range = [];
+//   const startCode = start.charCodeAt(0);
+//   const endCode = end.charCodeAt(0);
 
-  for (let i = startCode; i <= endCode; i += step) {
-    range.push(String.fromCharCode(i));
-  }
+//   for (let i = startCode; i <= endCode; i += step) {
+//     range.push(String.fromCharCode(i));
+//   }
 
-  return range;
-}
+//   return range;
+// }
 
-console.log(num_string_range('a', 'z', 2));
-console.log(num_string_range('A','Z',2));
-console.log(num_string_range(0,-5,1));//==>it not work in same code
+// console.log(num_string_range('a', 'z', 2));
+// console.log(num_string_range('A','Z',2));
+// console.log(num_string_range(0,-5,1));//==>it not work in same code
 
-function num_string_range(start, end, step) {
-  const range = [];
-  const isAscending = start <= end;
+// function num_string_range(start, end, step) {
+//   const range = [];
+//   const isAscending = start <= end;
 
-  if (isAscending) {
-    for (let i = start; i <= end; i += step) {
-      range.push(i);
-    }
-  } else {
-    for (let i = start; i >= end; i -= step) {
-      range.push(i);
-    }
-  }
+//   if (isAscending) {
+//     for (let i = start; i <= end; i += step) {
+//       range.push(i);
+//     }
+//   } else {
+//     for (let i = start; i >= end; i -= step) {
+//       range.push(i);
+//     }
+//   }
 
-  return range;
-}
+//   return range;
+// }
 
-console.log(num_string_range(0, -5, 1));    // [0, -1, -2, -3, -4, -5]
-console.log(num_string_range(0, 25, 5));    // [0, 5, 10, 15, 20, 25]
-console.log(num_string_range(20, 5, 5));    // [20, 15, 10, 5]
+// console.log(num_string_range(0, -5, 1));    // [0, -1, -2, -3, -4, -5]
+// console.log(num_string_range(0, 25, 5));    // [0, 5, 10, 15, 20, 25]
+// console.log(num_string_range(20, 5, 5));    // [20, 15, 10, 5]
 
-//39
-function remove_array_element(arr, element) {
-  return arr.filter(item => item !== element);
-}
+// //39
+// function remove_array_element(arr, element) {
+//   return arr.filter(item => item !== element);
+// }
 
-console.log(remove_array_element([2, 5, 9, 6], 5));
+// console.log(remove_array_element([2, 5, 9, 6], 5));
 
 
 //39
@@ -1220,54 +1219,54 @@ console.log(remove_array_element([2, 5, 9, 6], 5));
 
 
 //40
-function countArrays(arr) {
-  let count = 0;
+// function countArrays(arr) {
+//   let count = 0;
 
-  function checkArray(element) {
-    if (Array.isArray(element)) {
-      count++;
-      element.find(checkArray);
-    }
-  }
+//   function checkArray(element) {
+//     if (Array.isArray(element)) {
+//       count++;
+//       element.find(checkArray);
+//     }
+//   }
 
-  arr.find(checkArray);
-  return count;
-}
+//   arr.find(checkArray);
+//   return count;
+// }
 
-console.log(countArrays([2, 8, [6], 3, 3, 5, 3, 4, [5, 4]])); // 2
-console.log(countArrays([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]])); // 3 //==>it is not work in nested array it give 4
-console.log(countArrays([2,8,[6],3,3,5,3,4,[5,4]]));
-console.log(countArrays([2,8,[6,3,3],[4],5,[3,4,[5,4]]]  ));
-console.log(countArrays([2,8,[6,3,3],[4],5,[3,4,[5,4]], [23,56]]));
-console.log(countArrays([1,5,2,6,4,23,89]));
+// console.log(countArrays([2, 8, [6], 3, 3, 5, 3, 4, [5, 4]])); // 2
+// console.log(countArrays([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]])); // 3 //==>it is not work in nested array it give 4
+// console.log(countArrays([2,8,[6],3,3,5,3,4,[5,4]]));
+// console.log(countArrays([2,8,[6,3,3],[4],5,[3,4,[5,4]]]  ));
+// console.log(countArrays([2,8,[6,3,3],[4],5,[3,4,[5,4]], [23,56]]));
+// console.log(countArrays([1,5,2,6,4,23,89]));
 
 
-function countArrays(arr) {
-  const count = arr.filter(item => Array.isArray(item)).length;//==>what is length in this what is use it
-  return count;
-}
+// function countArrays(arr) {
+//   const count = arr.filter(item => Array.isArray(item)).length;//==>what is length in this what is use it
+//   return count;
+// }
 
-console.log(countArrays([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]])); // 3
+// console.log(countArrays([2, 8, [6, 3, 3], [4], 5,[1,2,5,8], [3, 4, [5, 4]]])); // 3
 
-//43
-function isFactorChain(arr) {
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] % arr[i - 1] !== 0) {
-      return false;
-    }
-  }
-  return true;
-}
+// //43
+// function isFactorChain(arr) {
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] % arr[i - 1] !== 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
-console.log(isFactorChain([2, 4, 8, 16, 32]));  // true
-console.log(isFactorChain([2, 4, 16, 32, 68])); // false
-console.log(isFactorChain([2, 4, 16, 32, 64])); // true
+// console.log(isFactorChain([2, 4, 8, 16, 32]));  // true
+// console.log(isFactorChain([2, 4, 16, 32, 68])); // false
+// console.log(isFactorChain([2, 4, 16, 32, 64])); // true
 
-let obj1 = { a: 23, b: 45 };
-let arr1 = [{ ...obj1 }];
-let arr2 = Object.assign([], arr1);
-arr2[0].c = 5;
-console.log(arr1); 
+// let obj1 = { a: 23, b: 45 };
+// let arr1 = [{ ...obj1 }];
+// let arr2 = Object.assign([], arr1);
+// arr2[0].c = 5;
+// console.log(arr1); 
 
 
 
