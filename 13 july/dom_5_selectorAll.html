@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tree_DOM</title>
+    </head>
+    <body>
+        <h1>We are learning js</h1>
+        <h1 class="get">Bhakti Hansalpara</h1>
+        <h2>currently I learn using video </h2>
+        <p class="get2">hello get
+            <span>everyone</span>
+            <em>world</em>
+            <span>you-tube</span>
+            <h1>heloo h1</h1>  //=>it is not added bcz it is block leval tag. it get in new line than it will not show with all the tages of get id//
+        </p>
+        <p id="myclass">
+            <span class="now">bye</span>
+            hello find
+        </p>
+        <div id="show">
+            <p class="get">1st p inside the div</p>
+            <p>2nd p inside the div</p>
+        </div>
+        <div class="show3"><p>heloo</p></div>
+        <div>it div have no id </div>
+        <p id="show1">2nd p insite div</p>
+
+        <!-- ------element selector------// -->
+
+        <script>
+
+            // var a=document.querySelectorAll("p");  //=>give one value
+            // var a=document.querySelectorAll("p,h1"); //=>give multiple value and it give both value list not only 1st 
+            // var a=document.querySelectorAll("p, h2,#myclass");//=>we also add id and class name using . and #
+            document.write(a);
+            console.log(a);
+            </script>
+
+            <!-- -------id selecor-----// -->
+            <script>
+                var a=document.querySelectorAll("#show , #show1");
+                document.write(a);
+                console.log(a);
+            </script>
+
+            <!-- -----class selector----// -->
+            <script>
+                var a=document.querySelectorAll(".get , .get2");
+                document.write(a);
+                console.log(a);
+            </script>
+
+            <!-- ------attribute selector--------// -->
+            <script>
+                // var a=document.querySelectorAll("div[id],div[class]");
+                var a=document.querySelectorAll("div[id='show']");
+                document.write(a);
+                console.log(a);
+            </script>
+         
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tree_DOM</title>
+    </head>
+    <body>
+        <h1>We are learning js</h1>
+        <h1>Bhakti Hansalpara</h1>
+        <h2>currently I learn using video </h2>
+        <p class="get now">hello get
+            <span>everyone</span>
+            <em>world</em>
+            <span>you-tube</span>
+            <h1>heloo h1</h1>  //=>it is not added bcz it is block leval tag. it get in new line than it will not show with all the tages of get id//
+        </p>
+        <p id="get">
+            <span class="now">bye</span>
+            hello find
+        </p>
+        <div>
+            <p class="get">1st p inside the div</p>
+            <p>2nd p inside the div</p>
+        </div>
+
+        <script>
+        var a = document.getElementById("get").getElementsByClassName("now");
+        document.write(a);
+        console.log(a);
+        </script>
+    </body>
+</html>

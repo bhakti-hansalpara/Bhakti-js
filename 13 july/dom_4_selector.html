@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tree_DOM</title>
+    </head>
+    <body>
+        <h1>We are learning js</h1>
+        <h1 class="get">Bhakti Hansalpara</h1>
+        <h2>currently I learn using video </h2>
+        <p class="get">hello get
+            <span>everyone</span>
+            <em>world</em>
+            <span>you-tube</span>
+            <h1>heloo h1</h1>  //=>it is not added bcz it is block leval tag. it get in new line than it will not show with all the tages of get id//
+        </p>
+        <p id="myclass">
+            <span class="now">bye</span>
+            hello find
+        </p>
+        <div id="show">
+            <p class="get">1st p inside the div</p>
+            <p>2nd p inside the div</p>
+        </div>
+        <p id="show1">2nd p insite div</p>
+
+        <script>
+            // ----------elemnt selector---------//
+            var a=document.querySelector("p");
+        var a=document.querySelector("p,h1 ")//=>h1
+        document.write(a);
+        console.log(a);
+        </script>
+
+        <!-- ---------id selector-------// -->
+       <script>
+        var a=document.querySelector("#show1");
+        document.write(a);
+        console.log(a);
+       </script>
+
+       <!-- ---------class selector--------// -->
+       <script>
+        var a=document.querySelector(".get, .myclass");
+        document.write(a);
+        console.log(a);
+       </script>
+
+       <!-- ---------aatribute selecotor----------// -->
+       <script>
+        var a=document.querySelectorAll()
+       </script>
+    </body>
+</html>

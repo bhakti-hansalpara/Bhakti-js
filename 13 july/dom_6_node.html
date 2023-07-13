@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NODE</title>
+    </head>
+    <body>
+        <h1 id="myid">  we are learning node  <!-- This is comment -->
+        </h1>
+        <p id="myid1">I am pareghaph</p>
+         
+
+        <script>
+            // ----document----//
+            document.write("----doument----"+"<br>");
+            document.write(document.nodeName+"<br>");
+            document.write(document.nodeValue+"<br>");
+            document.write(document.nodeType+"<br>");
+            console.log(document.nodeName);
+            console.log(document.nodeValue);
+            console.log(document.nodeType);
+
+
+            //---element---//
+            document.write("-------Element------"+"<br><br>");
+            var ele=document.getElementById("myid");
+            document.write(ele.nodeName+"<br>");
+            document.write(ele.nodeValue+"<br>");
+            document.write(ele.nodeType+"<br>");
+            console.log(ele.nodeName);
+            console.log(ele.nodeValue);
+            console.log(ele.nodeType);
+
+
+            //---text---//
+            document.write("-------text------"+"<br><br>");
+            var txt=document.getElementById("myid");
+            document.write(txt.firstChild.nodeName+"<br>");
+            document.write(txt.firstChild.nodeValue+"<br>");
+            document.write(txt.firstChild.nodeType+"<br>");
+            console.log(txt.firstChild.nodeName);
+            console.log(txt.firstChild.nodeValue);
+            console.log(txt.firstChild.nodeType);
+
+              
+            //----text-comment----//
+            document.write("-------text------"+"<br><br>");
+            var txt=document.getElementById("myid");
+            document.write(txt.firstChild.nextSibling.nodeName+"<br>");
+            document.write(txt.firstChild.nextSibling.nodeValue+"<br>");
+            document.write(txt.firstChild.nextSibling.nodeType+"<br>");
+            console.log(txt.firstChild.nextSibling.nodeName);
+            console.log(txt.firstChild.nextSibling.nodeValue);
+            console.log(txt.firstChild.nextSibling.nodeType);
+
+
+            //only see text node content----//
+            document.write("-------text-content------"+"<br><br>");
+            var txt=document.getElementById("myid");
+            document.write(txt.firstChild.nodeValue+"<br>");
+
+            //how to change content---//
+            document.write("-------text-content------"+"<br><br>");
+            var txt=document.getElementById("myid").firstChild.nodeValue="this is new value ";
+          document.write(txt);
+          console.log(txt);
+
+        </script>
+    </body>
+</html>

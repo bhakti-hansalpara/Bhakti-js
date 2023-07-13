@@ -7,18 +7,49 @@
     </head>
     <body>
         <p id="Bhakti">bhakti</p>
-        <p class="Patel">Patel</p>
+        <p class="Patel">Patel0</p>
 
+        <h1>Diya</h1>
+        <p class="Patel">Patel1</p>
+        <p class="Patel">Patel2</p>
+
+<!-- ------------using class id----------------// -->
         <script type="text/javascript">
             // var a=document.getElementById("Bhakti").innerHTML;
             var a=document.getElementById("Bhakti").innerText;//here in ID we access using both innerHTML and innerText 
             document.write(a);
 
         </script>
+<!-- -------------using class name------------// -->
+        <script>
+            // var b=document.getElementsByClassName("Patel")[0].innerHTML;
+            var b=document.getElementsByClassName("Patel")[0].innerText;
+            document.write(b)
+        </script>
 
         <script>
-            var b=document.getElementsByClassName("Bhakti")[0].innerHTML;
-            document.write(b)
+            var c=document.getElementsByTagName("h1");
+            document.write(c);
+            console.log(c);
+        </script>
+
+        <!-- ------------using access first elelment------------// -->
+        <script>
+            var d=document.querySelector('p').innerHTML;
+            document.write(d);
+            console.log(d);
+        </script>
+        <!-- -----------'*'-----------// -->
+        <script>
+            var e=document.getElementsByName("*");
+            document.write(e);
+            console.log(e);
+        </script>
+        <!-- ----------give all tags of body tag----------// -->
+        <script>
+            var f=document.body.getElementsByTagName("P").length;
+            document.write(f);
+            console.log(f);
         </script>
     </body>
 </html>
