@@ -15,7 +15,10 @@
             <h1>heloo h1</h1>  //=>it is not added bcz it is block leval tag. it get in new line than it will not show with all the tages of get id//
         </p>
         <p id="get">
+            <p>helloo html</p>
             <span class="now">bye</span>
+            <p>hello CSS</p>
+            <h2>heloo javascript</h2>
             hello find
         </p>
         <div>
@@ -27,6 +30,17 @@
         var a = document.getElementById("get").getElementsByClassName("now");
         document.write(a);
         console.log(a);
+        </script>
+
+        <script>
+            //close selector
+            // const commonAncestor = document.querySelector('.now').closest('#get');
+            // const h2Element = commonAncestor.querySelector('h2');
+            const h2Element = document.querySelector('#get .now + h2');
+
+            document.write(h2Element);
+            console.log(h2Element);
+
         </script>
     </body>
 </html>

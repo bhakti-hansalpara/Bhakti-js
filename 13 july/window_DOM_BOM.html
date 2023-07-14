@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello world</p>
+
+    <div id="myElement" style="display: none;">
+        Visible Text
+        <span style="display: none;">Hidden Text</span>
+      </div>
+      
+    <script>
+        console.log(window);
+        window.console.log(window); 
+        console.log(document);
+        console.log(document.body);
+        document.body.style.backgroundColor="pink";
+
+        const element = document.getElementById('myElement');
+
+        console.log(element.innerText); // Output: "Visible Text"
+        console.log(element.textContent); // Output: "Visible Text Hidden Text"
+
+        // location.href="https://codewithharry.com";
+
+    </script>
+</body>
+</html>

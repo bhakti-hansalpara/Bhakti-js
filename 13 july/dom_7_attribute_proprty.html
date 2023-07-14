@@ -1,0 +1,37 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title>
+            attribute
+        </title>
+    </head>
+    <body>
+        <h1 id="myid" class="myclass">hello good morning <!-- this is commet---></h1>
+        <p id="myid1"> I am pareghaph</p>
+
+        <script>
+            // //---attribute property name and value
+            // var a=document.getElementById("myid");
+            //  var attr=a.attributes[0].nodeName+"=";
+            //  var attr=a.attributes[0].nodeValue;
+            // //  console.log(a);
+
+            //  document.write(attr);
+            //  console.log(a);
+
+            //  //2nd method to write
+            //  var b=document.getElementsByClassName("myclass");
+            //  document.write(b.attributes[1].nodeName+" = ");
+            //  document.write(b.attributes[1].nodeValue);
+            //  console.log(b);
+
+            var a=document.getElementById("myid");
+            document.write(a.attributes[0].nodeName+"=");
+            document.write(a.attributes[0].nodeValue+"<br>");
+            document.write(a.attributes[1].nodeName+"=");
+            document.write(a.attributes[1].nodeName+"<br>");
+
+
+        </script>
+    </body>
+</html>
