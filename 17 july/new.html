@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Navbar and Hero Image</title>
+    <style>
+        *, *:before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    width : 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(14, 14, 14, 0.5);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.nav1{
+    display: inline-block;
+}
+
+.nav1 a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    margin-left: 40px;
+    color: white;
+}
+
+nav a img{
+    width: 100px;
+    height: 100px;
+}
+
+header{
+    height: 100vh;
+    background: url("https://cdn.wallpapersafari.com/68/6/59W1Ye.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+section{
+    font-size: 30px;
+}
+
+@media screen and (max-width: 600px){
+    nav{
+        /* flex-direction: column; */
+        display: none;
+    }
+
+    .nav-list{
+        /* flex-direction: column; */
+        display: none;
+    }
+
+    .nav1{
+        padding: 10px;
+        margin: 10px;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#logo">
+            <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png">
+        </a>
+        <ul class="nav-list">
+            <li class="nav1">
+                <a href="#home">Home</a>
+            </li>
+            <li class="nav1">
+                <a href="#product">Product</a>
+            </li>
+            <li class="nav1">
+                <a href="#about">About</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+    </header>
+</body>
+</html>

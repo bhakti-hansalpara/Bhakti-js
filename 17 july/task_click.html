@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu Bar</title>
+  <style>
+    .menu-item {
+      display: inline-block;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="menu-item" id="home" onclick="changeColor('home')">Home</div>
+  <div class="menu-item" id="visit" onclick="changeColor('visit')">Visit</div>
+  <div class="menu-item" id="product" onclick="changeColor('product')">Product</div>
+  <div class="menu-item" id="about" onclick="changeColor('about')">about</div>
+  <div class="menu-item" id="service" onclick="changeColor('service')">Service</div>
+
+
+  <script>
+    function changeColor(menuItem) {
+      var menuItems = document.getElementsByClassName('menu-item');
+
+      // Reset background color for all menu items using for loop it loop is 
+      for (var i = 0; i < menuItems.length; i++) {
+        menuItems[i].style.backgroundColor = '';
+      }
+
+      // Change background color of the clicked menu item
+      document.getElementById(menuItem).style.backgroundColor = 'lightblue';
+      document.getElementById(menuItem).style.backgroundColor = 'pink';
+
+    }
+  </script>
+</body>
+</html>
+
+

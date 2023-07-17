@@ -1,0 +1,140 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+    .navbar {
+  background-color: #968181;
+  /* overflow: hidden; */
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.menu-toggle {
+  color: #865454;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+.menu {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+
+  .navbar a.menu-toggle {
+    display: block;
+  }
+
+  .menu.responsive {
+    display: block;
+  }
+}
+
+ </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+<script>
+    function toggleMenu() {
+  var menu = document.getElementById("menu");
+  menu.classList.toggle("responsive");
+}
+
+</script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: montserrat;
+        }
+        nav{
+            background: #0082e6;
+            height: 80px;
+            width: 100%;
+        }
+        label.logo{
+            color: white;
+            font-size: 35px;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+        nav ul{
+            float: right;
+            margin-right: 20px;
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a{
+            color: white;
+            font-size: 17px;
+            padding: 7px, 13px;
+        }
+        a.active, a:hover{
+            background: #1b9bff;
+            transition: .5s;
+        }
+        @media (max-width:952px){
+            lable.logo{
+                font-size: 30px;
+                padding-left: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <label class="logo">DesignX</label>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>  
+            <li><a href="#">Contect</a></li>
+            <li><a href="#">Visit</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

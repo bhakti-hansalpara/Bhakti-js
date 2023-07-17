@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Navbar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+
+.topBar h1{
+    color: #fff;
+    font-size: 29px;
+}
+
+.navbar{
+    background: #222831;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+li{
+    float: left;
+    list-style-type: none;
+}
+
+li a{
+    color: #eee;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 2px;
+    transition: .5s linear;
+    font-size: 17px;
+}
+
+li a:hover{
+    background: #eee;
+    color: #222831;
+    border-radius: 50px;
+}
+
+.topBar .toggle{
+    display: none;
+    /* border-radius: 5px; */
+}
+
+@media (max-width: 740px) {
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    li{
+        float: none;
+        margin: 30px;
+        animation: slide .5s linear 1;
+    }
+
+    @keyframes slide {
+        0%{
+            transform: translateX(50px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    li a{
+        font-size: 20px;
+    }
+
+    .navMenu{
+        background: #161a20;
+        width: 100%;
+        margin-top: 30px;
+        border-radius: 10px;
+        display: none;
+    }
+
+    .topBar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .topBar .toggle{
+        font-size: 30px;
+        display: block;
+        color: #eee;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="topBar">
+            <h1>Logo</h1>
+            <i class="uil uil-bars toggle"></i>
+        </div>
+        <ul class="navMenu" id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <script>
+        const menuToggle = document.querySelector(".navbar");
+        const menu = document.querySelector("#menu");
+
+        menuToggle.addEventListener("click", function() {
+            menu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
+
+
+
+
