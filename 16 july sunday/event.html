@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <div class="cointainer" onmouseenter="console.log('container ke andar mouse gya');"
+    onclick="console.log('container me click hua');">
+        <button onclick="alert('hello')">Click me</button> 
+    </div>
+
+    <button id="btn" onclick="btnClick()">Click me</button>
+
+    <script>
+        function btnClick(){
+            alert("button was clicked!")
+        }
+        let btn=document.getElementById("btn");
+        btn.addEventListener('click', btnClick)
+    </script>
+</body>
+</html>

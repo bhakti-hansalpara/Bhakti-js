@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse events</title>
+
+    <script>
+        function hello(){
+              document.write("hello everyone")
+            alert('hello javascript')
+        }
+        function gd(){
+            alert('good morning')
+        }
+        function gn(){
+            alert('good night')
+        }
+        function kp(){
+            alert('key press is run')
+        }
+       
+  </script>
+</head>
+<body onkeypress="kp()">
+ <button onclick="hello()">Click mee</button>    
+<p ondblclick="hello()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cumque maiores tempore
+     modi repudiandae nisi aliquid expedita cum temporibus doloremque dolorem unde ullam architecto vero minus
+      iusto veritatis, aspernatur consectetur!</p>
+
+      <!-- <p oncontextmenu="hello()">Right click mouse event</p>
+      <p onmouseenter="hello">mouse in event</p>
+      <p onmouseout="hello()">mouse out </p> -->
+      <P onmousedown="gd()">mouse down</P>
+      <p onmouseup="gn()">mouse up</p>
+
+      <!-- ----keyword events----- -->
+      <p >key press event</p>
+      <p>key up</p>
+
+   
+</body>
+</html>

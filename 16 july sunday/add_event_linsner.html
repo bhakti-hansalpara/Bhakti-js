@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event linear</title>
+</head>
+<body>
+    
+    <h2 id="title">Welcome to page</h2>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</but ton>
+
+        <script>
+            let title=document.querySelector("#title")
+            let btn1=document.querySelector("#btn1")
+
+            let btn2=document.querySelector("#btn2")
+
+            let btn3=document.querySelector("#btn3")
+
+            btn1.addEventListener('click', function(){
+                title.innerHTML="button 1 has clicked"
+            })
+
+            btn2.addEventListener('click', function(){
+                title.innerHTML=" great button 2 has clicked"
+            })
+
+            btn3.addEventListener('click', function(){
+                title.innerHTML=" now the button 3 has clicked"
+            })
+        </script>
+</body>
+</html>
