@@ -10,17 +10,17 @@
 //   calculate();  //=>y is not defined that give error
 
 //2
-function outer() {
-    var x = 10;
+// function outer() {
+//     var x = 10;
   
-    function inner() {
-      console.log(x);
-    }
+//     function inner() {
+//       console.log(x);
+//     }
   
-    inner();
-  }
+//     inner();
+//   }
   
-  outer();
+//   outer(); //10
 
   //3
   var x = 5;
@@ -30,18 +30,19 @@ function foo() {
   var x = 10;
 }
 
-foo();
+foo(); //undefined =>bcz log is passed before inisllize when we write x up to log then it run and print 10
 
 
 //4
 var x = 5;
 
 function foo() {
+    var x = 10;
   console.log(x);
-  var x = 10;
-}
+  
+} 
 
-foo();
+foo(); //10
 //5
 var x = 15;
 
@@ -87,7 +88,7 @@ function outer() {
   inner();
 }
 
-outer();
+outer();//60
 
 
 //8
@@ -103,7 +104,7 @@ function counter() {
   }
   
   var result = counter();
-  var count = 100;
+  var count = 100;//no error and print nothing
 
   
   //9
@@ -132,7 +133,7 @@ function foo() {
   console.log(x);
 }
 
-foo();
+foo();//20
 
 
 //11
@@ -144,7 +145,7 @@ function sum() {
   }
   
   var addFive = sum();
-  var result = addFive(5);
+  var result = addFive(5);//no error nothing print
 
   
   //12
@@ -171,7 +172,7 @@ function inner() {
   outer();
 }
 
-inner();
+inner();//100
 
 
 //14
@@ -179,7 +180,7 @@ function showMessage() {
     message = 'Hello, World!';
   }
   
-  showMessage();
+  showMessage();//nothing print
 
   
   //15
@@ -193,7 +194,7 @@ function showMessage() {
     return x;
   }
   
-  var result = test();
+  var result = test(); //nothing
 
   
   //16
@@ -205,7 +206,7 @@ function foo() {
 }
 
 foo();
-console.log(x);
+console.log(x);//20  15
 
 //17
 function outer() {
@@ -221,7 +222,7 @@ function outer() {
   }
   
   outer();
-  var result = x;
+  var result = x; //error x is not defied
 
   
   //18
@@ -237,7 +238,7 @@ function foo() {
 }
 
 foo();
-console.log(x);
+console.log(x); //30 30 10
 
 
 //19
@@ -253,7 +254,7 @@ function foo() {
   bar();
 }
 
-foo();
+foo();//15
 
 
 //20
@@ -269,4 +270,3 @@ function outer() {
 
   
   //21
-  
