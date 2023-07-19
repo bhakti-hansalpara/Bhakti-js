@@ -431,7 +431,7 @@ const nestedObject = {
 // let output = shortenWords(input);
 // console.log(output); // Output: "E3y d7r l3s to mix k8s and j8t"
 
-// ----Q-13----//
+// ----Q-12----//
 
 // const products = [
 //     { name: "Product 1", price: 20, category: "Electronics" },
@@ -490,13 +490,13 @@ const nestedObject = {
 //   }
 //   console.log(propertyCounter(employees));
 
-// function departWiseSalary(arr) {
-//   let a = arr.filter(val => val.department === "IT").map(val => val.salary)
-//   let b = arr.filter(val => val.department === "HR").map(val => val.salary)
-//   let c = {IT:a,HR:b};
-//   return c
-// }
-// console.log(departWiseSalary(employees));
+function departWiseSalary(arr) {
+  let a = arr.filter(val => val.department === "IT").map(val => val.salary)
+  let b = arr.filter(val => val.department === "HR").map(val => val.salary)
+  let c = {IT:a,HR:b};
+  return c
+}
+console.log(departWiseSalary(employees));
 
 // count the average salary of each department
 // function averagePrice(employees) {
