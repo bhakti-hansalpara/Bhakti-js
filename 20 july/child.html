@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">Welcome to my page of javascript</h1>
+        <div id="myfirst" class="child red  good" id="first">Child 1
+            <ui class="this">
+                <li class="childul">this</li>
+                <li class="childul">myfirst</li>
+                <li class="childul">page</li>
+                <li class="childul">of</li>
+                <li class="childul">Dom</li>
+            </ui>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form>
+            <a href="http://google.com">Go to goggle page</a>
+            <br>
+            <br>
+            Search this website : <input type="text" name="hello" id="">
+            <input type="button" value="subbmit">
+        </form>
+    </div>
+    <br>
+    <div class="no">This is a dummy div 1</div>
+    <div class="no">This is a dummy div 2</div>
+    <div class="no">This is a dummy div 3</div>
+
+    <script>
+        let cont=document.querySelector('.no');
+         cont=document.querySelector('.container');
+
+        // console.log(cont.childNodes);
+        // console.log(cont.children);
+            let nodename=cont.childNodes[1].nodeName;
+            let nodeType=cont.childNodes[0].nodeType;
+
+        console.log(nodename);
+        console.log(nodeType);
+
+        let container=document.querySelector('div.container');
+        console.log(container.children);
+        console.log(container.children[1].children[0].children);
+        console.log(container.firstChild);
+        console.log(container.firstElementChild);
+
+        console.log(container.lastChild);
+        console.log(container.lastElementChild);
+
+        //diffrence between lastchild and lastelementchild 
+        //lastchild is also inclued space, commets and etc.. 
+        // but in lastelemetchild is give last elemet not inclued space or comments
+        console.log(container.childElementCount);
+        console.log(container.firstElementChild.parentNode);
+        console.log(container.firstElementChild.nextElementSibling);
+        console.log(container.firstElementChild.nextSibling.nextSibling.nextSibling.nextSibling);
+
+
+
+    </script>
+</body>
+</html>

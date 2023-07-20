@@ -11,6 +11,8 @@
      <div id="two" style="width: 60px; height: 60px; background-color: black;"></div>
     </div>
 
+    <h1>Mouse event</h1>
+    Name : <input type="text" id="mytext">
     <!-- <script>
         function div1(e){
             console.log(e.type);
@@ -56,9 +58,20 @@
         divtwo.addEventListener("constmenu, div2, false");
         divone.addEventListener("mouseup, div1, false");
 
-
-
-
     </script>
+
+<script>
+    var txt=document.getElementById("mytext");
+    function changcolorOrange(e){
+       txt.style.backgroundColor='pink'
+    }
+    var txt=document.getElementById("mytext");
+    function changcolorWhite(e){
+       txt.style.backgroundColor='white'
+    }
+    txt.addEventListener("mouseover",changcolorOrange,false);
+    txt.addEventListener("mouseout",changcolorWhite,false)
+
+   </script>
 </body>
 </html>
