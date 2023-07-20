@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Mouse events</h1>
+    <div id="one" style="width: 100px; height: 100px; background-color: red;">
+     <div id="two" style="width: 60px; height: 60px; background-color: black;"></div>
+    </div>
+
+    <!-- <script>
+        function div1(e){
+            console.log(e.type);
+        }
+        var divone=document.getElementById("one");
+        var divtwo=document.getElementById("two");
+        divtwo.addEventListener("mousedown",div1,false);
+        divtwo.addEventListener("mouseup",div1,false);
+        divtwo.addEventListener("click",div1,false);//for leftclick
+        // divtwo.addEventListener("dblclick",div1,false);
+        // divtwo.addEventListener("mouseenter",div1,false);
+        // divtwo.addEventListener("mouseleave",div1,false);
+        // divtwo.addEventListener("mouseover",div1,false);
+        // divtwo.addEventListener("mouseout",div1,false);
+
+        //diffrence between moseout and mouseleave
+        //The mouseout event triggers when the mouse pointer leaves any child elements as well the selected element. 
+        //The mouseleave event is only triggered when the mouse pointer leaves the selected element.
+
+
+        //diffrence between mouseenter and mouseover
+        //The mouseover event triggers when the mouse pointer enters the div element, and its child elements. 
+        //The mouseenter event is only triggered when the mouse pointer enters the div element.
+
+        // divtwo.addEventListener("mousemove",div1,false);
+        divtwo.addEventListener("contextmenu",div1,false); //for click rightclick 
+
+        // ------diffrence between mouseup and mousedown------//
+        //MouseDown occurs when the user presses the mouse button; MouseUp occurs when the user releases the mouse button
+
+        
+    </script> -->
+    <script>
+        function div1(e){
+            console.log(e.type);
+        }
+        function div2(e){
+            console.log(e.type);
+        }
+        var divone=document.getElementById("one");
+        var divtwo=document.getElementById("two");
+
+        divtwo.addEventListener("constmenu, div2, false");
+        divone.addEventListener("mouseup, div1, false");
+
+
+
+
+    </script>
+</body>
+</html>

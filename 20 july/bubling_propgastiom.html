@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubbling</title>
+</head>
+<body id="body">
+    <div id="outer">
+        i am outer
+        <div id="inner">
+            i am inner
+        </div>
+    </div>
+
+    <a href="https://www.google.com">click me</a>
+<!-- 
+    <script>
+        let outer=document.querySelector('#outer');
+        let inner=document.querySelector('#inner');
+
+        outer.addEventListener("click",function(){
+            console.log("outer clicked");
+        })
+
+        body.addEventListener("click",function(){
+            console.log("body clicked");
+        })
+
+        inner.addEventListener("click",function(event){
+            event.stopImmediatePropagation();
+            console.log("inner clicked-1");
+        })
+
+            // ---stopprogestion---//
+        //it is use to stop bubling .
+
+        inner.addEventListener("click",function(event){
+            event.stopPropagation();
+            console.log("inner clicked-2");
+        }) -->
+
+        
+        <!-- //when you click inner then both are called outer and inner click 
+        //but in outclick only it called not innerclick
+
+        //diffrence between stopImmedaitepropagation and stoppropagation
+        //event. stopPropagation() allows other handlers on the same element to be executed, while event. 
+        //stopImmediatePropagation() prevents every event from running -->
+
+    
+    </script>
+
+    <script>
+         let outer=document.querySelector('#outer');
+        let inner=document.querySelector('#inner');
+        let a=document.querySelector('a');
+
+        a.addEventListener("click",function(e){
+            e.preventDefault()
+            console.log("a clicked");
+        })
+        //preventDefault is stop to get other move page //it stop the defult event
+
+    </script>
+</body>
+</html>

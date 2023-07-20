@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myp"></p>
+    <h2>Bhakti Patel</h2>
+    <div id="text">
+        <h2>heyy guyess</h2>
+        <p>nice to meet you</p>
+    </div>
+
+    <script>
+        var p=document.getElementById("myp")
+        p.textContent="<em>Hello good morning</em>";
+        //textcontect is show eveything also html tags hall line with between " ".
+        //=><em>Hello good morning</em>
+
+
+        // p.innerHTML="<em> have a nice day</em>"
+        //it not like textcontent it follow the tag and apply in text 
+        //=>have a nice day (in etali formte)
+
+        //when you write only plain text then you does not right in innerHtml bcz it not sceure user can change and mofiy 
+        //it html but you write in textContect then it is safe now.
+        //that is not only innerhtml use to modify text we can also use endchild and create element to edit html
+        //using crete element is more safe then innerhtml 
+    </script>
+
+
+     <script>
+        var newelement=document.createElement("h2");
+        var newtext=document.createTextNode("this is new text");
+        var newcoment=document.createComment("this is coment");
+        // -appendchild---//
+        newelement.appendChild(newtext);
+        //now it both in one line <h2>this is new text</h2>
+
+        //appendchild add there text in end of the div not in start it is always in end but 
+        //if you add text in start yaa center then use insertbefore 
+
+        var target=document.getElementById("test");
+        target.insertBefore(newelement,target.childNodes[0])
+
+        // ---diffrece between appedchild and innerhtml---//
+        //innerHTML is easy to use and the code with innerHTML is maximally concise. el. innerHTML='<div title="Some title">Some text</div>';
+        // In contrast, appendChild() does not accept HTML and needs extra code for generating the Node objects.
+        
+        document.getElementById("test").appendChild(newelement)
+        document.getElementById("test").appendChild(newcoment)
+
+
+        console.log(newelement);
+        console.log(newtext);
+        console.log(newcoment);
+        //first create h2 and after show this is new text line
+     </script>
+</body>
+</html>
