@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv" > Hover me</div>
+
+    <script>
+        // Add a mouseover event listener to the div element
+document.getElementById("myDiv").addEventListener("mouseover", function() {
+  this.textContent = "Mouse over the div!";
+});
+
+// Add a mouseout event listener to reset the text when the mouse leaves the div
+document.getElementById("myDiv").addEventListener("mouseout", function() {
+  this.textContent = "Hover over me!";
+});
+
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 75px;
+            background-color: blueviolet;
+            color: bisque;
+            padding: 5%;
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+        Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Earum ipsa est beatae unde, accusamus ab. Facilis sint, expedita, earum recusandae deleniti
+        molestiae incidunt voluptatum vel voluptas nesciunt architecto perspiciatis dolore?
+    </p>
+    <div class="hover">
+        <p>Hover Me</p>
+    </div>
+</body>
+<script>
+    let box = document.querySelector(".hover");
+    box.addEventListener("click", function () {
+        box.style.backgroundColor = "#ffff00"; // Change the color to yellow (#ffff00)
+    });
+</script>
+</html>

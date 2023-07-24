@@ -1,0 +1,97 @@
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btn-2</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{
+            background-color: #212121;
+            color:white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .flex-center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            box-shadow: -5px -5px 8px 10px rgba(106, 106, 106, 0.458)  ;
+            border: 2px solid rgb(236, 231, 231);
+            position: absolute;
+            bottom: 50%;
+            padding: 40px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgb(150, 147, 10);
+            cursor: pointer;
+        }
+        .main-container{
+            width: 40%;
+            height: 50%;
+        }
+        div.notification{
+            padding: 10px;
+            background-color: rgb(230, 169, 169);
+            border: 2px solid black;
+            margin-block: 10px;
+             width: 100; 
+            font-size: 18px;
+            color: black;
+        }
+        .notification-container{
+            position: fixed;
+            width: 300px;
+            bottom: 5%;
+            right: 3%;
+        }
+    </style>
+</head>
+<body class="flex-center">
+    <div class="main-container flex-center">
+        <div class="click-btn btn" onmouseenter="notigiver()" onmouseleave="notitaker()">SHOW NOTIFICATION</div>
+    </div>
+    <div class="notification-container"></div>
+</body>
+<script>
+    const clickButton = document.querySelector('.click-btn')
+    const notificationContainer = document.querySelector('.notification-container')
+    console.log(clickButton);
+    clickButton.addEventListener('mouseover',(e)=>{
+        let notifications = ['Hi there!' , 'Have a nice day' , 'Thanks' , 'Follow me'];
+        let current_noti = notifications[Math.floor(Math.random() * notifications.length)]
+        console.log(current_noti);
+        let notification = document.createElement('div');
+        notification.className = 'notification'
+        notification.innerText = current_noti;
+        notificationContainer.appendChild(notification);
+})
+let starter;
+let ender;
+    function notigiver() {
+        let notifications = ['Hi there!' , 'Have a nice day' , 'Thanks' , 'Follow me'];
+        let current_noti = notifications[Math.floor(Math.random() * notifications.length)]
+        // console.log(current_noti);
+        clearTimeout(ender)
+        let notification = document.createElement('div');
+        notification.className = 'notification'
+        notification.innerText = current_noti;
+        notificationContainer.appendChild(notification);
+        starter = setTimeout(()=> {
+            notigiver()
+        },500)
+    }
+    function notitaker() {
+        clearTimeout(starter)
+        notificationContainer.firstChild.remove();
+        ender = setTimeout(()=>{
+            notitaker()
+        },500)
+    }
+</script>
+</html>
+ 

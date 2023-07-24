@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Notification</title>
+    <head>
+        <style>
+            .notification {
+                position: fixed; 
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px 20px;
+                background-color: #f1f1f1;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+    
+            .message {
+                position: fixed;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                padding: 10px 20px;
+                background-color: #f1f1f1;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+    
+            .show {
+                opacity: 1;
+            }
+        </style>
+    
+</head>
+<body>
+  
+        <button id="notificationButton" class="notification">Show Notification</button>
+        <div id="message" class="message"></div>
+    
+        <script>
+            var notificationButton = document.getElementById('notificationButton');
+            var message = document.getElementById('message');
+            var notifications = ['hello', 'nice day', 'good day'];
+            var currentNotificationIndex = 0;
+    
+            notificationButton.addEventListener('click', function() {
+                if (currentNotificationIndex < notifications.length) {
+                    message.innerText = notifications[currentNotificationIndex];
+                    currentNotificationIndex++;
+                } else {
+                    // Reset to the first notification after showing all notifications
+                    currentNotificationIndex = 0;
+                    message.innerText = notifications[currentNotificationIndex];
+                    currentNotificationIndex++;
+                }
+    
+                message.classList.add('show');
+            });
+    
+            notificationButton.addEventListener('mouseleave', function() {
+                message.innerText = '';
+                message.classList.remove('show');
+            });
+        </script>
+</body>
+</html>
+ -->

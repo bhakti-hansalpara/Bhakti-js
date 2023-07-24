@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="myinput" placeholder="enter your name">
+
+    </form>
+<!-- 
+    <script>
+        var input=document.getElementById("myinput");
+        input.addEventListener('keydown',function(e){
+          if(e.keyCode!==Number){
+                alert('key is pressed!')
+            }
+        })
+    </script> -->
+
+    <script>
+        var input = document.getElementById("myinput");
+        input.addEventListener('keydown', function(e) {
+            // Get the key code of the pressed key
+            var keyCode = e.keyCode || e.which;
+
+            // Check if the pressed key is a number (key codes 48 to 57 represent digits 0 to 9)
+            if (keyCode >= 48 && keyCode <= 57) {
+                alert('Numbers are not allowed!');
+                e.preventDefault(); // Prevent the number from being entered in the input field
+            }
+        });
+    </script>
+</body>
+</html>

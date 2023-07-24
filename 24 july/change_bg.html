@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: blue;
+            height: 100vh;
+            /* display: grid; */
+        }
+        button{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                text-align: center;
+                align-items: center;
+                padding: 20px 45px;
+               background-color: transparent;
+                border: 2px solid #ffff;
+                /* border-radius: 20%; */
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">click me</button>
+
+    <script>
+        var store=document.getElementById("btn").addEventListener("click",function(){
+            document.body.style.backgroundColor='rgb('+ Math.round(Math.random()*155)+','+Math.round(Math.random()*255)+','+
+            Math.round(Math.random()*250)+')';
+        })
+    </script>
+</body>
+</html>
