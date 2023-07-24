@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <br>
+        Name : <input type="text" id="name">
+        <br>
+        <br>
+        Id : <input type="text" id="id">
+        <br>
+        <br>
+        Collage : <input type="text" id="Collage">
+        <br>
+
+    </form>
+    <br>
+    <button id="Submitt">Submitt</button>
+
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const id = document.getElementById("id").value;
+            const college = document.getElementById('college').value;
+
+            const alertMessage = `Name: ${name}\nID: ${id}\nCollege: ${college}`;
+            alert(alertMessage);
+        });
+    </script> -->
+<!-- </body> -->
+
+<!-- </html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Username and Password Alert</title>
+</head>
+<body>
+    <h2>Enter your username and password:</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br>
+
+        <!-- Change type attribute to "button" -->
+        <button type="button" id="submitButton">Submit</button>
+    </form>
+
+    <script>
+        // Attach a click event listener to the submit button
+        document.getElementById("submitButton").addEventListener("click", function() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // You can add some basic validation here if needed
+            
+            // Display an alert with the entered username and password
+            // alert("Username: " + username + "\nPassword: " + password);
+            alert(`username:${username}\n password:${password}`)
+        });
+    </script>
+
+    <script>
+        const btn=document.createElement('button')
+        button.textContent("bClick me");
+
+        addEventListener('click',()=>{
+            console.log('button is clicked');
+        })
+        document.body.appendChild('button')
+
+    </script>
+</body>
+</html>
