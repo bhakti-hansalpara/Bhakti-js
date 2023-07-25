@@ -341,6 +341,10 @@ const nestedObject = {
 
 
 // --------Q 10--------//
+//Get name initials
+// input = "George Raymond Richard Martin"; Output: “GRRM”
+// input = “george raymond Richard Martin”; Output: “ GRRM”
+
 // function FirstName(name) {
 //     const words = name.split(" ");
 //     const res = words.map(word => word[0].toUpperCase()).join("");
@@ -368,6 +372,9 @@ const nestedObject = {
 
 
 //   ------ Q 11-------//
+//Get output like example
+// input = "Every developer likes to mix kubernetes and javascript";
+// output = "E3y d7r l3s to mix k8s and j8t"
 
 
 // function convertToNumbers(sentence) {
@@ -390,6 +397,10 @@ const nestedObject = {
 //   console.log(convertedSentence);
   
 // //   -------Q 12--------//
+
+// const products = [
+
+
 // function convertToNumbers(sentence) {
 //     const words = sentence.split(" ");
 //     const convertedWords = [];
@@ -537,6 +548,16 @@ console.log(departWiseSalary(employees));
 //   console.log(names);
   
 // // 14
+//
+// Make a function that returns the grouped data based on first letter of the string.
+// For Example: [“Jeel” , “Prakhar” , “Bhakti”, “Vansh”, “Meghna”, “Bhaumik”, “Pujan”, “Rudra”, “Sachin” , “Dhruval”]
+// Output: {
+// 		J: [“Jeel”],
+// 		P: [“Pakhar”, “Pujan”],
+// 		B: [“Bhakti”, “Bhaumik”],
+// 		…….. And so on
+// 	    }
+
 // function groupDataByFirstLetter(strings) {
 //     const groupedData = {};
   
@@ -569,6 +590,7 @@ console.log(departWiseSalary(employees));
 //   console.log(groupedData);
 
 // //   15
+//
 // function flat(arr) {
 //     const flattened = [];
   
@@ -828,6 +850,8 @@ console.log(departWiseSalary(employees));
 // console.log(sumAge);
 
 //25
+//const nestedArray = [[1, 2], [3, 4], [5, 6]];
+// => flat this array using reduce (NOTE: array will be only depth 1)
 // const nestedArray = [[1, 2], [3, 4], [5, 6]];
 // => flat this array using reduce
 // ---1st take---//
@@ -843,6 +867,9 @@ console.log(departWiseSalary(employees));
 
 
 //26
+//Create an array of squares of even numbers from a given array.
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
 // Create an array of squares of even numbers from a given array.
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 // const evenSquares = numbers.filter(num => num % 2 === 0).map(num => num ** 2); 
@@ -859,6 +886,9 @@ console.log(departWiseSalary(employees));
 // console.log(evenSquares);
 
 //27
+//Filter out duplicate values from an array.
+// const numbers = [1, 2, 2, 3, 4, 4, 5];
+
 // const numbers = [1, 2, 2, 3, 4, 4, 5];
 
 // const repeat = numbers.filter((value, index, arr) => {
@@ -867,6 +897,11 @@ console.log(departWiseSalary(employees));
 // console.log(repeat);
 
 //28
+//
+// Find the first string that contains the letter 'a' in an array.
+// const words = ['apple', 'banana', 'orange'];
+
+//
 // ---1st take---//
 // const words = ['apple', 'banana', 'orange'];
 
@@ -887,6 +922,9 @@ console.log(departWiseSalary(employees));
 // console.log(result);
 
 //29
+//Find the index of the first odd number in an array.
+// const numbers = [2, 4, 6, 8, 9, 10];
+
 // Find the index of the first odd number in an array.
 // const numbers = [2, 4, 6, 8, 9, 10];
 // const result = words.find(word => {
@@ -910,6 +948,7 @@ console.log(departWiseSalary(employees));
 //in reduce when you not defind odd number than it not give undefined it give last number index
 
 //30
+//Write a function that returns the factorial of given number
 // ------using recreusen----//
 // function factorial(n){
 //   if(n < 0){
@@ -948,6 +987,14 @@ console.log(departWiseSalary(employees));
 // console.log("Factorial of " + n + " : " + answer);
 
 //31
+//Find the index of the first person whose name starts with 'A' and age is less than 20.
+// const people = [
+//   { name: 'Alice', age: 18 },
+//   { name: 'Bob', age: 20 },
+//   { name: 'Charlie', age: 19 },
+//   { name: 'David', age: 21 }
+// ];
+
 // Find the index of the first person whose name starts with 'A' and age is less than 20.
 // -1st take-//
 // const people = [
@@ -995,6 +1042,14 @@ console.log(departWiseSalary(employees));
 
 
 // //32
+
+// make a function that takes two parameter (arrayOfArray, array) and returns boolean based on following example:
+
+// fun_name([[1, 2], [34, 67], [67, 77], [88, 90]], [1, 2]) => true
+// fun_name([[1, 2], [34, 67], [67, 77], [88, 90]], [2, 1]) => true
+// fun_name([[1, 2], [34, 67], [67, 77], [88, 90]], [22, 15]) => false
+// fun_name([[1, 2], [34, 67], [67, 77], [22, 90, 15], [88, 90]], [22, 15, 90]) => true
+
 // function containsSubarray(arrayOfArray, array) {
 //   return arrayOfArray.some((subarray) => {
 //     if (subarray.length !== array.length) {
@@ -1011,6 +1066,13 @@ console.log(departWiseSalary(employees));
 
 
 // //33
+//make a function that takes two parameter (arrayOfArray, array) and returns boolean based on following example:
+//
+// fun_name([[1, 2], [34, 67], [67, 77], [88, 90]], [1, 2]) => true
+// fun_name([[1, 2], [34, 67], [67, 77], [88, 90]], [2, 1]) => false
+// fun_name([[1, 2], [34, 67], [67, 77], [88, 90]], [22, 15]) => false
+// fun_name([[1, 2], [34, 67], [67, 77], [22, 90, 15], [88, 90]], [22, 15, 90]) => false
+
 // function containsSubarray(arrayOfArray, array) {
 //   return arrayOfArray.some((subarray) => {
 //     return subarray.length === array.length && subarray.every((value, index) => value === array[index]);
@@ -1024,6 +1086,12 @@ console.log(departWiseSalary(employees));
 
 
 //34
+//
+// Write a JavaScript program to compute the union of two arrays.
+// Sample Data :
+// console.log(union([1, 2, 3], [100, 2, 1, 10]));
+// Output: [1, 2, 3, 10, 100]
+
 // function union(arr1, arr2) {
 //   const mergedArray = [arr1, arr2].flat();
 //   const unionArray = [...new set(mergedArray)];
@@ -1044,6 +1112,16 @@ console.log(departWiseSalary(employees));
 
 
 // //35
+
+// Write a JavaScript function to find the difference between two arrays.
+// Test Data :
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+// Output: ["3", "10", "100"]
+// console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
+// Output: ["6"]
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+// Output: ["3", "10", "100"]
+
 // function difference(arr1, arr2) {
 //   const diffArray = arr1.filter((value) => !arr2.includes(value));
 //   const diffArray2 = arr2.filter((value) => !arr1.includes(value));
@@ -1106,6 +1184,11 @@ console.log(departWiseSalary(employees));
 // Output: ["3", "10", "100"]
 
 //36
+// /Write a JavaScript program to find a pair of elements (indices of the two numbers) in a given array whose sum equals a specific target number.
+// (FOR NOW CONSIDER THERE ARE ONLY ONE PAIR WHICH IS POSSIBLE SOLUTION)
+// Input: numbers= [10,20,10,40,50,60,70], target=50
+// Output: [10, 40] || [40,10]
+
 // function findPair(numbers, target) {
 //   const pair = [];
 
@@ -1154,12 +1237,23 @@ console.log(departWiseSalary(employees));
 
 
 //37
+//
+// Sample array : [NaN, 0, 15, false, -22, '',undefined, 47, null]
+// Expected result : [15, -22, 47]
+
 // const array = [NaN, 0, 15, false, -22, '', undefined, 47, null];
 // const result = array.filter(Number);
 // console.log(result);
 // Output: [15, -22, 47]
 
 //38
+//Write a function that returns the result like examples
+// num_string_range('a', "z", 2) => ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
+// num_string_range("Z", "A", 2) => ["Z", "X", "V", "T", "R", "P", "N", "L", "J", "H", "F", "D", "B"]
+// num_string_range(0, -5, 1) => [0, -1, -2, -3, -4, -5]
+// num_string_range(0, 25, 5) => [0, 5, 10, 15, 20, 25]
+// num_string_range(20, 5, 5) => [20, 15, 10, 5]
+
 // function num_string_range(start, end, step) {
 //   const range = [];
 //   const startCode = start.charCodeAt(0);
@@ -1206,6 +1300,10 @@ console.log(departWiseSalary(employees));
 
 
 //39
+// Write a JavaScript function to remove a specific element from an array.
+// Test data :
+// remove_array_element([2, 5, 9, 6], 5); => [2, 9, 6]
+
 // function contains(arr, element) {
 //   return arr.includes(element);
 // }
@@ -1219,6 +1317,12 @@ console.log(departWiseSalary(employees));
 
 
 //40
+// Write a JavaScript function to find an array containing a specific element.
+// Test data : (ONLY FOR STRING AND NUMBER)
+// arr = [2, 5, 9, 6];
+// contains(arr, 5); => True
+// contains(arr, 10); => False
+
 // function countArrays(arr) {
 //   let count = 0;
 
@@ -1248,7 +1352,58 @@ console.log(departWiseSalary(employees));
 
 // console.log(countArrays([2, 8, [6, 3, 3], [4], 5,[1,2,5,8], [3, 4, [5, 4]]])); // 3
 
+
+
+// 41---------------------------------------------------------------------------------------
+
+// Write a JavaScript program to count the number of arrays inside a given array.
+// Test Data :
+// ([2,8,[6],3,3,5,3,4,[5,4]]) -> 2
+// ([2,8,[6,3,3],[4],5,[3,4,[5,4]]]) -> 3
+
+//   function countArrays(arr) {
+//     let count = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (Array.isArray(arr[i])) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+//   console.log(countArrays([2, 8, [6], 3, 3, 5, 3, 4, [5, 4]])); 
+//   console.log(countArrays([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]])); 
+
+// 42
+// Write a JavaScript program to find the maximum length of arrays inside a given array.
+// Test Data :
+// [2,8,[6],3,3,5,3,4,[5,4]] -> 2
+// [2,8,[6,3,3],[4],5,[3,4,[5,4]]] -> 3
+// [2,8,[6,3,3],[4],5,[3,4,[5,4]], [23,56]] -> 4
+// [1,5,2,6,4,23,89] -> 0
+
+// function findMaxLength(arr) {
+//     const subarrays = arr.filter(Array.isArray);
+//     const lengths = subarrays.map(subarray => subarray.length);
+//     const maxLength = lengths.reduce((max, length) => Math.max(max, length), 0);
+//     return maxLength;
+//   }
+  
+//   console.log(findMaxLength([2, 8, [6], 3, 3, 5, 3, 4, [5, 4]])); 
+//   console.log(findMaxLength([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]])); 
+//   console.log(findMaxLength([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]], [23, 56]])); 
+//   console.log(findMaxLength([1, 5, 2, 6, 4, 23, 89])); 
+
 // //43
+
+// Write a JavaScript program to check if an array is a factor chain or not.
+// A factor chain is an array in which the previous element is a factor of the next    consecutive element. The following is a factor chain:
+// [2, 4, 8, 16, 32]
+// // 2 is a factor of 4  // 4 is a factor of 8  // 8 is a factor of 16  // 16 is a factor of 32
+// Test Data :
+// ([2, 4, 8, 16, 32]) -> true          ([2, 4, 16, 32, 68]) -> false
+// ([2, 4, 16, 32, 64]) -> true
+
 // function isFactorChain(arr) {
 //   for (let i = 1; i < arr.length; i++) {
 //     if (arr[i] % arr[i - 1] !== 0) {
