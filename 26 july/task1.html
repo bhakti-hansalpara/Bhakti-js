@@ -1,0 +1,77 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Username Confirmation</title>
+     <style>
+        body{
+            text-align: center;
+             align-items: center;
+             height: 100vh;
+             display: flex;
+             justify-content: center;
+             border: 2px solid;
+             margin: 0 auto;
+             padding: 20px;
+             width: 100vw;
+             /* max-height: 194px; */
+           }
+           #Form{
+            border: 2px solid;
+            padding: 40px;
+            background-color: lightpink;
+           }
+        
+     </style>
+ </head>
+ <body>
+     <form id="Form">
+         <label for="username">Name : </label>
+         <input type="text" id="username">
+         <br>
+         <br>
+         <input type="submit" value="Submit">
+     </form>
+ 
+     <div id="output"></div>
+ 
+     <script>
+         document.getElementById("Form").addEventListener("submit", function(event) {
+             event.preventDefault();
+             var usernameInput = document.getElementById("username").value.trim();
+ 
+             if (usernameInput.length > 3) {
+                 var box = confirm("Can you submit your data: " + usernameInput);
+                 
+
+                 if (box) {
+                     var output = document.getElementById("output");
+                     var newContent = document.createElement("p");
+                     newContent.textContent = "Username: " + usernameInput;
+                     output.appendChild(newContent);
+                     username.value=" ";
+
+                     var deleteButton = document.createElement("button");
+                    deleteButton.textContent = "Delete";
+                    deleteButton.addEventListener("click", function() {
+                        output.removeChild(newContent);
+                    });
+
+                    newContent.appendChild(deleteButton);
+                    output.appendChild(newContent);
+                    username.value = "";
+                 } else {
+                    username.value=" ";
+                     confirm("Your name was not submitted.");
+                 }
+             } else {
+                 confirm("Username must be longer than 3 characters.");
+             }
+             return false;
+         });
+     </script>
+ </body>
+ </html>
+ 

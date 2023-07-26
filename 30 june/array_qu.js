@@ -728,8 +728,8 @@ console.log(departWiseSalary(employees));
 // 	let arr2 = arr1.map(item => item.a * 2);
 // console.log(arr1);  // => [{a: 34}, {a: 45}, {a:12}, {a:5}, {a:78}]
 // 	console.log(arr2);  // =>[68,90,24,10,156]
-  //my guss is right
-  //it *2 all the a in arr beacse the map method all are * by 2
+//   my guss is right
+//   it *2 all the a in arr beacse the map method all are * by 2
 
   //21
 // let arr = [1,2,3,4,5];
