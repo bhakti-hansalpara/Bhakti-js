@@ -1101,13 +1101,17 @@ console.log(departWiseSalary(employees));
 // console.log(union([1, 2, 3], [100, 2, 1, 10]));
 // Output: [1, 2, 3, 10, 100]//it is not work
 
-// function union(arr1, arr2) {
-//   const mergedArray = arr1.concat(arr2).flat();
-//   const unionArray = mergedArray.filter((value, index, array) => array.indexOf(value) === index);
-//   return unionArray;
-// }
+function union(arr1, arr2) {
+  const mergedArray = arr1.concat(arr2).flat();
+  console.log(mergedArray); //[
+                                   //1, 2,  3, 100,
+                                   //2, 1, 10
+                                   //] => it concat both array
+  const unionArray = mergedArray.filter((value, index, array) => array.indexOf(value) === index);
+  return unionArray;
+}
 
-// console.log(union([1, 2, 3], [100, 2, 1, 10]));
+console.log(union([1, 2, 3], [100, 2, 1, 10]));
 // Output: [1, 2, 3, 10, 100]
 
 
@@ -1133,6 +1137,8 @@ console.log(departWiseSalary(employees));
 
 // function difference(arr1, arr2) {
 //   const diffArr1 = arr1.filter(item => !arr2.includes(item));
+//   const res=diffArr1.toString();
+//   console.log(res);
 //   const diffArr2 = arr2.filter(item => !arr1.includes(item));
 //   let arr3= diffArr1.concat(diffArr2);
 //   return arr3;
@@ -1189,30 +1195,30 @@ console.log(departWiseSalary(employees));
 // Input: numbers= [10,20,10,40,50,60,70], target=50
 // Output: [10, 40] || [40,10]
 
-// function findPair(numbers, target) {
-//   const pair = [];
+function findPair(numbers, target) {
+  const pair = [];
 
-//   for (let i = 0; i < numbers.length; i++) {
-//     for (let j = i + 1; j < numbers.length; j++) {
-//       if (numbers[i] + numbers[j] === target) {
-//         pair.push(numbers[i], numbers[j]);
-//         break;
-//       }
-//     }
-//     if (pair.length) {
-//       // break;
-//       continue;
-//     }
-//   }
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = i + 1; j < numbers.length; j++) {
+      if (numbers[i] + numbers[j] === target) {
+        pair.push(numbers[i], numbers[j]);
+        break;
+      }
+    }
+    if (pair.length) {
+      // break;
+      continue;
+    }
+  }
 
-//   return pair;
-// }
+  return pair;
+}
 
-// const numbers = [10, 20, 10, 40, 50, 60, 70];
-// const target = 50;
+const numbers = [10, 20, 10, 40, 50, 60, 70];
+const target = 50;
 
-// const result = findPair(numbers, target);
-// console.log(result);
+const result = findPair(numbers, target);
+console.log(result);
 
 
 // function findPair(numbers, target) {
@@ -1290,6 +1296,8 @@ console.log(departWiseSalary(employees));
 // console.log(num_string_range(0, -5, 1));    // [0, -1, -2, -3, -4, -5]
 // console.log(num_string_range(0, 25, 5));    // [0, 5, 10, 15, 20, 25]
 // console.log(num_string_range(20, 5, 5));    // [20, 15, 10, 5]
+console.log(num_string_range('a', 'z', 2));
+console.log(num_string_range('A','Z',2));
 
 // //39
 // function remove_array_element(arr, element) {

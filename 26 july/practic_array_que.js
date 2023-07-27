@@ -207,7 +207,266 @@
 // console.log(sumOfSquares); // Output: 55
 
 
+//32
+// function containsSubarray(arrayOfArray, array) {
+//   return arrayOfArray.some((subarray) => {
+//     if (subarray.length !== array.length) {
+//       return false;
+//     }
+//     return subarray.every((value, index) => value === array[index]);
+//   });
+// }
 
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [1, 2])); // Output: true
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [2, 1])); // Output: true
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [22, 15])); // Output: false
+// console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [22, 90, 15], [88, 90]], [22, 15, 90])); // Output: true
+
+// function containsSubarray(arrayOfArray, array) {
+//     const arrayStr = array.toString();
+//     return arrayOfArray.some((subarray) => subarray.toString().includes(arrayStr));
+//   }
+  
+//   console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [1, 2])); // Output: true
+//   console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [2, 1])); // Output: true
+//   console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [88, 90]], [22, 15])); // Output: false
+//   console.log(containsSubarray([[1, 2], [34, 67], [67, 77], [22, 90, 15], [88, 90]], [22, 15, 90])); // Output: true
+  
+//34
+// function union(arr1, arr2) {
+//     // const mergedArray = arr1.concat(arr2).flat();
+//     const mergedArray = arr1.concat(arr2);
+
+//     console.log(mergedArray); //[
+//                                      //1, 2,  3, 100,
+//                                      //2, 1, 10
+//                                      //] => it concat both array
+//     const unionArray = mergedArray.filter((value, index, array) => array.indexOf(value) === index);
+//     return unionArray;
+//   }
+  
+//   console.log(union([1, 2, 3], [100, 2, 1, 10]));
+
+// function difference(arr1, arr2) {
+    //   const diffArr1 = arr1.filter(item => !arr2.includes(item));
+    //   const res=diffArr1.toString();
+    //   console.log(res);
+    //   const diffArr2 = arr2.filter(item => !arr1.includes(item));
+    //   let arr3= diffArr1.concat(diffArr2);
+    //   return arr3;
+    // }
+    
+    // // Testing the function
+    // console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+    // console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]))
+
+    //36
+    // Input: numbers= [10,20,10,40,50,60,70], target=50
+    // Output: [10, 40] || [40,10]
+//     const number=[10,20,40,50,60,70]
+//    const pair=[];
+//     function cal(number,target){
+//         for(i=0; i<number.length; i++){
+//             for(j=0; j<number.length; j++){
+//                 if(number[i]+number[j]===target){
+//                     pair.push(number[i],number[j])
+//                 }
+//             }
+//             // if(pair.length){
+//             //     break;
+//             // }
+//         }
+//         return pair;
+//     }
+//     const numbers = [10, 20, 10, 40, 50, 60, 70];
+// const target = 50;
+
+// const result = cal(numbers, target);
+// console.log(result);
+
+//37
+
+// Sample array : [NaN, 0, 15, false, -22, '',undefined, 47, null]
+// Expected result : [15, -22, 47]
+// const array=[NaN, 0, 15, false, -22, '',undefined, 47, null];
+// const a=array.filter(Number);
+// console.log(a);
+
+//38
+// num_string_range('a', "z", 2) => ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
+// num_string_range("Z", "A", 2) => ["Z", "X", "V", "T", "R", "P", "N", "L", "J", "H", "F", "D", "B"]
+// num_string_range(0, -5, 1) => [0, -1, -2, -3, -4, -5]
+// num_string_range(0, 25, 5) => [0, 5, 10, 15, 20, 25]
+// num_string_range(20, 5, 5) => [20, 15, 10, 5]
+
+// function num(start,end,Increment){
+// const newArray=[];
+// const startCode=start.charCodeAt(0);
+// const endCode=end.charCodeAt(0);
+// for(let i=startCode; i<=endCode; i=+Increment){
+//     newArray.push(startCode,endCode)
+// }
+// return newArray
+// }
+// console.log(num('a', 'z', 2));
+// console.log(num('A','Z',2));
+//get error but not understand
+// function num_string_range(start, end, step) {
+//   const range = [];
+//   const startCode = start.charCodeAt(0);
+//   const endCode = end.charCodeAt(0);
+
+//   for (let i = startCode; i <= endCode; i += step) {
+//     range.push(String.fromCharCode(i));//what is fromCharCode
+//   }
+
+//   return range;
+// }
+
+// console.log(num_string_range('a', 'z', 2));
+// console.log(num_string_range('A','Z',2));
+// num_string_range(0, 25, 5) => [0, 5, 10, 15, 20, 25]
+// num_string_range(20, 5, 5) => [20, 15, 10, 5]
+
+// console.log(num_string_range(0,-5,1));//==>it not work in same code
+  // [20, 15, 10, 5]
+  
+
+//for number
+// function num_string_range(start, end, step) {
+//     const range = [];
+//     // const isAscending = start <= end;
+  
+//     if (isAscending) {
+//       for (let i = start; i <= end; i += step) {
+//         range.push(i);
+//       }
+//     } else {
+//       for (let i = start; i >= end; i -= step) {
+//         range.push(i);
+//       }
+//     }
+  
+//     return range;
+//   }
+  
+//   console.log(num_string_range(0, -5, 1));    // [0, -1, -2, -3, -4, -5]
+//   console.log(num_string_range(0, 25, 5));    // [0, 5, 10, 15, 20, 25]
+//   console.log(num_string_range(20, 5, 5)); 
+
+
+//40
+// remove_array_element([2, 5, 9, 6], 5); => [2, 9, 6]
+
+// function contains(arr, element) {
+//   return arr.includes(element);
+// }
+
+// const arr = [2, 5, 9, 6];
+// console.log(contains(arr, 5));
+// // Output: true
+
+// console.log(contains(arr, 10));
+// // Output: false
+
+
+//39
+// function remove_array_element(arr,ToRemove) {
+//     // Use the filter method to create a new array without the element to remove
+//     const filteredArray = arr.filter((element) => element !== ToRemove);
+  
+//     return filteredArray;
+//   }
+  
+//   // Test data
+//   const resultArray = remove_array_element([2, 5, 9, 6], 5);
+//   console.log(resultArray); // Output: [2, 9, 6]
+  
+//41
+// function countArrays(arr) {
+//     const count = arr.filter(item => Array.isArray(item)).length;//==>what is length in this what is use it
+//     return count;
+//   }
+  
+//   console.log(countArrays([2, 8, [6, 3, 3], [4], 5,[1,2,5,8], [3, 4, [5, 4]]])); // 4
+
+// function countArrays(arr) {
+//     let count = 0;
+  
+//     // Iterate through each element in the input array
+//     for (const item of arr) {
+//       // Check if the current item is an array
+//       if (Array.isArray(item)) {
+//         count++; // Increment the count if the current item is an array
+//       }
+//     }
+  
+//     return count; // Return the final count of arrays
+//   }
+  
+//   console.log(countArrays([2, 8, [6, 3, 3], [4], 5, [1, 2, 5, 8], [3, 4, [5, 4]]])); // Output: 4
+
+//42
+// function findMax(arr) {
+//     return arr.reduce((maxLength, item) => {
+//       if (Array.isArray(item)) {
+//         return Math.max(maxLength, item.length);
+//       } else {
+//         return maxLength;
+//       }
+//     }, 0);
+//   }
+  
+//   // Test cases
+//   console.log(findMax([2, 8, [6], 3, 3, 5, 3, 4, [5, 4]])); // Output: 2
+//   console.log(findMax([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]])); // Output: 3
+//   console.log(findMax([2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]], [23, 56]])); // Output: 3
+//   console.log(findMax([1, 5, 2, 6, 4, 23, 89])); // Output: 0
+  
+//43
+// [2, 4, 8, 16, 32]
+// // 2 is a factor of 4  // 4 is a factor of 8  // 8 is a factor of 16  // 16 is a factor of 32
+// Test Data :
+// ([2, 4, 8, 16, 32]) -> true          ([2, 4, 16, 32, 68]) -> false
+// ([2, 4, 16, 32, 64]) -> true
+
+// function isFactorChain(arr) {
+//     for (let i = 1; i < arr.length; i++) {
+//       if (arr[i] % 2== 0) {
+//         return false;
+//       }
+//     }
+//     return true;
+//   }
+//   console.log(isFactorChain[2,4,8,16,32]);
+
+
+// for(i=0; i<=5; i++)
+// console.log(i);
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+
+function isFactorChain(arr) {
+    return arr.every((element, index) => {
+      if (index === 0) {
+        return true; // The first element doesn't need to be checked.
+      } else {
+        return element % arr[index-1] === 0;
+      }
+    });
+  }
+  
+  // Test cases
+  console.log(isFactorChain([2, 4, 8, 16, 32])); // Output: true
+  console.log(isFactorChain([2, 4, 16, 32, 68])); // Output: false
+  console.log(isFactorChain([2, 4, 16, 32, 64])); // Output: true
+  
+
+    
 
 
 
