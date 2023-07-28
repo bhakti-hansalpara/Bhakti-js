@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+<body>
+    <div class="container">
+        <h3>BMI calulater</h3>
+
+        <form>
+            <p><label>Height in CM :</label><input type="text" id="height"></p>
+            <p><label>Weight in KG :</label><input type="text" id="weight"></p>
+            <button>Calculate</button>
+            <div class="result"></div>
+            <div class="weight-gide"></div>
+            <h4>BMI weight gide</h4>
+            <p>Under weight less then 18.5</p>
+            <p>Normal weight =18.5 to 24.9</p>
+            <p>Overweight =Greater than 24.9</p>
+        </form>
+    </div>
+
+    <script>
+        var form=document.querySelector("form");
+        const weight=parseInt(document.querySelector("#weight").value);
+       //when you get all weight value in this place then it run and get emety but we get this value to click submit btn
+
+        form.addEventListener("submit",(e)=>{
+              e.preventDefault();
+              const height=parseInt(document.querySelector("#height").value)
+              console.log(height);// value give in string it convert into int add parseInt
+
+            const weight=parseInt(document.querySelector("#weight").value);
+            console.log(weight);
+            const result=document.querySelector("#result");
+
+            if(height===' '||height<0 ||isNaN(height)){
+                result.innerHTML='please enter vaild height';
+                console.log(result);
+
+            if(weight===''||weight < 0 ||isNaN(weight)){
+                result.innerHTML='please enter vaild weight';
+                console.log(result);
+            }    
+            }
+
+
+        })
+    </script>
+</body>
+</html>

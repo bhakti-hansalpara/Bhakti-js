@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+            <button>Click me</button>
+        </div>
+    </section>
+
+    <script>
+        var button=document.querySelector("button");
+        var div=document.querySelector("div");
+        
+        //---------------bubbling----------------//
+        //it is defult value you are false or not not matter it get from child to parent
+        //     console.log("div");
+        // })
+
+        // button.querySelector("click",()=>{
+        //     console.log("button");
+        // })
+        //this case give button  div section
+
+
+        //---------capture---------//
+        //when you write ture then it oppsite to bubbling it get from parent to child 
+        // div.querySelector("click",()=>{
+        //     console.log("div");
+        // },true)
+
+        // button.querySelector("click",()=>{
+        //     console.log("button");
+        // },true)
+        // //this case give secton div button
+
+        //------- stop propagastion---------//
+        //it is use to stop it parent also when you click child then it run only child not add in parnt 
+
+        //--------stop ImmediatePropogation-----//
+        //it is use to stop propogation on same eventlinsner when you write this then after all eventlisner is not propogate
+
+        //------prevent deaful------//
+        //it is stop refresh the page
+    </script>
+</body>
+</html>
