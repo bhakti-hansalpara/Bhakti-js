@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_validation</title>
+    <style>
+        body{
+            padding: 10px 50px;
+        }
+        .formdesign{
+            font-size: 20px;
+            padding: 10px;
+        }
+        .formdesign input{
+            width: 200px;
+            padding: 12px , 20px;
+            border: 1px solid;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        .formerror{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>From</h3>
+    <form>
+        <div class="formdesign" id="name">
+            Name : <input type="text" name="fname"><b><span class="formerror">This is an error</span></b>
+        </div>
+
+        <div class="formdesign" id="email">
+            Email : <input type="email" name="femail"><b><span class="formerror">This is an error</span></b>
+        </div>
+
+        <div class="formdesign" id="phone">
+            Phone no : <input type="text" name="fphone"><b><span class="formerror">This is an error</span></b>
+        </div>
+
+        <div class="formdesign" id="add">
+            Address : <input type="text" name="faddress"><b><span class="formerror">This is an error</span></b>
+        </div>
+
+        <div class="formdesign" id="password">
+            Password : <input type="text" name="fpassword"><b><span class="formerror">This is an error</span></b>
+        </div>
+    </form>
+</body>
+</html>
